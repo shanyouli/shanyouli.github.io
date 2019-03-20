@@ -17,7 +17,7 @@
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate>
       
       <guid>https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/</guid>
-      <description>安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &amp;#34;~/.config/mpd/database&amp;#34; log_file &amp;#34;~/.config/mpd/log&amp;#34; # Optional music_directory &amp;#34;~/Music&amp;#34; playlist_directory &amp;#34;~/.config/mpd/playlists&amp;#34; pid_file &amp;#34;~/.config/mpd/pid&amp;#34; state_file &amp;#34;~/.config/mpd/state&amp;#34; sticker_file &amp;#34;~/.config/mpd/sticker.sql&amp;#34; 可能遇到的问题 第一个 listen:</description>
+      <description>&lt;h2 id=&#34;安装-mpd-mpc-ncmpcpp&#34;&gt;安装 mpd mpc ncmpcpp&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -144,16 +144,44 @@ mount /dev/sdx1 /mnt/boot&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tab
       <pubDate>Tue, 19 Mar 2019 23:52:51 +0800</pubDate>
       
       <guid>https://shanyouli.github.io/post/first/</guid>
-      <description>这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &amp;#34;Hello, Hugo!!!&amp;#34;</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;这是一个测试文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, Hugo!!!&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>Initialization archwsl(Windows Subsystem for ArchLinux)</title>
       <link>https://shanyouli.github.io/post/archwslinit/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://shanyouli.github.io/post/archwslinit/</guid>
-      <description>Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &amp;#34;Please input a new username: &amp;#34; username echo &amp;#34;--&amp;gt; $usernameis you create a new user!&amp;#34; useradd -m -G wheel -s /bin/zsh &amp;#34;$username&amp;#34;   Set a password for root.</description>
+      <description>&lt;h2 id=&#34;initialize-keyring-before-using-pacman-and-install-core-package&#34;&gt;Initialize Keyring before using pacman and install core package&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pacman-key --init
+pacman-key --populate
+pacman -Syyu base base-devel
+pacman -S git zsh vim&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

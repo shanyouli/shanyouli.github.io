@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Shanyouli" />
-  <meta name="description" content="安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &amp;#34;~/.config/mpd/database&amp;#34; log_file &amp;#34;~/.config/mpd/log&amp;#34; # Optional music_directory &amp;#34;~/Music&amp;#34; playlist_directory &amp;#34;~/.config/mpd/playlists&amp;#34; pid_file &amp;#34;~/.config/mpd/pid&amp;#34; state_file &amp;#34;~/.config/mpd/state&amp;#34; sticker_file &amp;#34;~/.config/mpd/sticker.sql&amp;#34; 可能遇到的问题 第一个 listen:" />
+  <meta name="description" content="安装 mpd mpc ncmpcpp" />
 
   <meta name="keywords" content="Emacs, ArchLinux, Bash" />
 
@@ -60,26 +60,26 @@
 
 
 <meta property="og:title" content="Music Player Daemon 安装和配置" />
-<meta property="og:description" content="安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &#34;~/.config/mpd/database&#34; log_file &#34;~/.config/mpd/log&#34; # Optional music_directory &#34;~/Music&#34; playlist_directory &#34;~/.config/mpd/playlists&#34; pid_file &#34;~/.config/mpd/pid&#34; state_file &#34;~/.config/mpd/state&#34; sticker_file &#34;~/.config/mpd/sticker.sql&#34; 可能遇到的问题 第一个 listen:" />
+<meta property="og:description" content="安装 mpd mpc ncmpcpp" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/" />
 <meta property="article:published_time" content="2019-03-20T00:00:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-03-20T17:08:11&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-20T17:17:31&#43;08:00"/>
 
 <meta itemprop="name" content="Music Player Daemon 安装和配置">
-<meta itemprop="description" content="安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &#34;~/.config/mpd/database&#34; log_file &#34;~/.config/mpd/log&#34; # Optional music_directory &#34;~/Music&#34; playlist_directory &#34;~/.config/mpd/playlists&#34; pid_file &#34;~/.config/mpd/pid&#34; state_file &#34;~/.config/mpd/state&#34; sticker_file &#34;~/.config/mpd/sticker.sql&#34; 可能遇到的问题 第一个 listen:">
+<meta itemprop="description" content="安装 mpd mpc ncmpcpp">
 
 
 <meta itemprop="datePublished" content="2019-03-20T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-20T17:08:11&#43;08:00" />
-<meta itemprop="wordCount" content="247">
+<meta itemprop="dateModified" content="2019-03-20T17:17:31&#43;08:00" />
+<meta itemprop="wordCount" content="312">
 
 
 
 <meta itemprop="keywords" content="music,linux,mpd," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Music Player Daemon 安装和配置"/>
-<meta name="twitter:description" content="安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &#34;~/.config/mpd/database&#34; log_file &#34;~/.config/mpd/log&#34; # Optional music_directory &#34;~/Music&#34; playlist_directory &#34;~/.config/mpd/playlists&#34; pid_file &#34;~/.config/mpd/pid&#34; state_file &#34;~/.config/mpd/state&#34; sticker_file &#34;~/.config/mpd/sticker.sql&#34; 可能遇到的问题 第一个 listen:"/>
+<meta name="twitter:description" content="安装 mpd mpc ncmpcpp"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -349,6 +349,7 @@
 <ul>
 <li><a href="#第一个">第一个</a></li>
 <li><a href="#第二个">第二个</a></li>
+<li><a href="#第三个">第三个</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -360,6 +361,7 @@
     
     <div class="post-content">
       <h2 id="安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp</h2>
+
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -381,6 +383,8 @@
 touch ~/.config/mpd/<span class="o">{</span>database,log,pid,state,sticker,sql<span class="o">}</span></code></pre></td></tr></table>
 </div>
 </div>
+<!--more-->
+
 <h3 id="创建并编辑-dot-config-mpd-mpd-dot-conf">创建并编辑 ~/.config/mpd/mpd.conf</h3>
 
 <blockquote>
@@ -456,7 +460,7 @@ exception: Input plugin &#39;qobuz&#39; is unavailable: No Qobuz app_id configur
 <ul>
 <li><p>解决方法: 在 ~/.config/mpd/mpd.conf 中添加如下</p>
 
-<p>#+BEGIN_QUOTE</p>
+<blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt"> 1
@@ -516,7 +520,47 @@ decoder {
 #       gapless                 &#34;no&#34;
 }</code></pre></td></tr></table>
 </div>
-</div></li>
+</div></blockquote></li>
+
+<li><p><a href="https://github.com/MusicPlayerDaemon/MPD/issues/430">参考</a></p></li>
+</ul>
+
+<h4 id="第三个">第三个</h4>
+
+<blockquote>
+<p>No &lsquo;audio_output&rsquo; defined in config file</p>
+</blockquote>
+
+<ul>
+<li><p>解决方法: 在 ~/.config/mpd/mpd.conf 中添加如下</p>
+
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil">audio_output {
+    type      &#34;alsa&#34;
+    name      &#34;Master&#34;
+##    device      &#34;hw:0,0&#34;    # optional
+##    mixer_type      &#34;hardware&#34;  # optional
+##    mixer_device    &#34;default&#34;   # optional
+##    mixer_control   &#34;PCM&#34;       # optional
+##    mixer_index &#34;0&#34;     # optional
+}</code></pre></td></tr></table>
+</div>
+</div></blockquote></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/Music%5FPlayer%5FDaemon/Troubleshooting">参考</a></p></li>
 </ul>
     </div>
 

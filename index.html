@@ -330,7 +330,7 @@
   <div class="post-content">
     
     <div class="post-summary">
-      安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &#34;~/.config/mpd/database&#34; log_file &#34;~/.config/mpd/log&#34; # Optional music_directory &#34;~/Music&#34; playlist_directory &#34;~/.config/mpd/playlists&#34; pid_file &#34;~/.config/mpd/pid&#34; state_file &#34;~/.config/mpd/state&#34; sticker_file &#34;~/.config/mpd/sticker.sql&#34; 可能遇到的问题 第一个 listen:
+      <h2 id="安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp</h2>
     </div>
     <div class="read-more">
       <a href="/post/mpd%E9%85%8D%E7%BD%AE/" class="read-more-link">Read more</a>
@@ -501,7 +501,21 @@ mount /dev/sdx1 /mnt/boot</code></pre></td></tr></table>
   <div class="post-content">
     
     <div class="post-summary">
-      这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &#34;Hello, Hugo!!!&#34;
+      <ul>
+<li>这是一个测试文件</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/usr/bin/env bash
+</span><span class="cp"></span>
+<span class="nb">echo</span> <span class="s2">&#34;Hello, Hugo!!!&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
     <div class="read-more">
       <a href="/post/first/" class="read-more-link">Read more</a>
@@ -532,7 +546,21 @@ mount /dev/sdx1 /mnt/boot</code></pre></td></tr></table>
   <div class="post-content">
     
     <div class="post-summary">
-      Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &#34;Please input a new username: &#34; username echo &#34;--&gt; $usernameis you create a new user!&#34; useradd -m -G wheel -s /bin/zsh &#34;$username&#34;   Set a password for root.
+      <h2 id="initialize-keyring-before-using-pacman-and-install-core-package">Initialize Keyring before using pacman and install core package</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacman-key --init
+pacman-key --populate
+pacman -Syyu base base-devel
+pacman -S git zsh vim</code></pre></td></tr></table>
+</div>
+</div>
     </div>
     <div class="read-more">
       <a href="/post/archwslinit/" class="read-more-link">Read more</a>

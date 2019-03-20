@@ -17,7 +17,7 @@
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate>
       
       <guid>https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/</guid>
-      <description>安装 mpd mpc ncmpcpp 1 pacman -Syu --needed --noconfirm mpd mpc ncmpcpp 配置 mpd 1 2 3 mkdir -p ~/.config/mpd/playlists touch ~/.config/mpd/{database,log,pid,state,sticker,sql} 创建并编辑 ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 # Required files db_file &amp;#34;~/.config/mpd/database&amp;#34; log_file &amp;#34;~/.config/mpd/log&amp;#34; # Optional music_directory &amp;#34;~/Music&amp;#34; playlist_directory &amp;#34;~/.config/mpd/playlists&amp;#34; pid_file &amp;#34;~/.config/mpd/pid&amp;#34; state_file &amp;#34;~/.config/mpd/state&amp;#34; sticker_file &amp;#34;~/.config/mpd/sticker.sql&amp;#34; 可能遇到的问题 第一个 listen:</description>
+      <description>&lt;h2 id=&#34;安装-mpd-mpc-ncmpcpp&#34;&gt;安装 mpd mpc ncmpcpp&lt;/h2&gt;</description>
     </item>
     
   </channel>
