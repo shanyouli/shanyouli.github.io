@@ -20,5 +20,14 @@
       <description>这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &amp;#34;Hello, Hugo!!!&amp;#34;</description>
     </item>
     
+    <item>
+      <title>Initialization archwsl(Windows Subsystem for ArchLinux)</title>
+      <link>https://shanyouli.github.io/post/archwslinit/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/post/archwslinit/</guid>
+      <description>Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &amp;#34;Please input a new username: &amp;#34; username echo &amp;#34;--&amp;gt; $usernameis you create a new user!&amp;#34; useradd -m -G wheel -s /bin/zsh &amp;#34;$username&amp;#34;   Set a password for root.</description>
+    </item>
+    
   </channel>
 </rss>

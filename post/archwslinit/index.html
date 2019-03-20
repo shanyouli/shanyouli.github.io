@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>First - Time Cottage</title>
+  <title>Initialization archwsl(Windows Subsystem for ArchLinux) - Time Cottage</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Shanyouli" />
-  <meta name="description" content="这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &amp;#34;Hello, Hugo!!!&amp;#34;" />
+  <meta name="description" content="Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &amp;#34;Please input a new username: &amp;#34; username echo &amp;#34;--&amp;gt; $usernameis you create a new user!&amp;#34; useradd -m -G wheel -s /bin/zsh &amp;#34;$username&amp;#34;   Set a password for root." />
 
   <meta name="keywords" content="Emacs, ArchLinux, Bash" />
 
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.54.0" />
 
 
-<link rel="canonical" href="https://shanyouli.github.io/post/first/" />
+<link rel="canonical" href="https://shanyouli.github.io/post/archwslinit/" />
 
 
 
@@ -59,27 +59,27 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="First" />
-<meta property="og:description" content="这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &#34;Hello, Hugo!!!&#34;" />
+<meta property="og:title" content="Initialization archwsl(Windows Subsystem for ArchLinux)" />
+<meta property="og:description" content="Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &#34;Please input a new username: &#34; username echo &#34;--&gt; $usernameis you create a new user!&#34; useradd -m -G wheel -s /bin/zsh &#34;$username&#34;   Set a password for root." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://shanyouli.github.io/post/first/" />
-<meta property="article:published_time" content="2019-03-19T23:52:51&#43;08:00"/>
-<meta property="article:modified_time" content="2019-03-19T23:52:51&#43;08:00"/>
+<meta property="og:url" content="https://shanyouli.github.io/post/archwslinit/" />
+<meta property="article:published_time" content="2019-03-10T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-10T00:00:00&#43;08:00"/>
 
-<meta itemprop="name" content="First">
-<meta itemprop="description" content="这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &#34;Hello, Hugo!!!&#34;">
+<meta itemprop="name" content="Initialization archwsl(Windows Subsystem for ArchLinux)">
+<meta itemprop="description" content="Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &#34;Please input a new username: &#34; username echo &#34;--&gt; $usernameis you create a new user!&#34; useradd -m -G wheel -s /bin/zsh &#34;$username&#34;   Set a password for root.">
 
 
-<meta itemprop="datePublished" content="2019-03-19T23:52:51&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-19T23:52:51&#43;08:00" />
-<meta itemprop="wordCount" content="16">
+<meta itemprop="datePublished" content="2019-03-10T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-10T00:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="172">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="First"/>
-<meta name="twitter:description" content="这是一个测试文件 1 2 3 #!/usr/bin/env bash echo &#34;Hello, Hugo!!!&#34;"/>
+<meta name="twitter:title" content="Initialization archwsl(Windows Subsystem for ArchLinux)"/>
+<meta name="twitter:description" content="Initialize keyring before using pacman and Install Core Packages 1 2 3 4  pacman-key --init pacman-key --populate pacman -Syyu base base-devel pacman -S git zsh vim   Create a new users and set a password 1 2 3  read -r -p &#34;Please input a new username: &#34; username echo &#34;--&gt; $usernameis you create a new user!&#34; useradd -m -G wheel -s /bin/zsh &#34;$username&#34;   Set a password for root."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -315,11 +315,11 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">First</h1>
+      <h1 class="post-title">Initialization archwsl(Windows Subsystem for ArchLinux)</h1>
       
       <div class="post-meta">
-        <time datetime="2019-03-19" class="post-time">
-          2019-03-19
+        <time datetime="2019-03-10" class="post-time">
+          2019-03-10
         </time>
         
         
@@ -337,15 +337,44 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#initialize-keyring-before-using-pacman-and-install-core-packages">Initialize keyring before using pacman and Install Core Packages</a></li>
+<li><a href="#create-a-new-users-and-set-a-password">Create a new users and set a password</a>
+<ul>
+<li><a href="#set-a-password-for-root-dot">Set a password for root.</a></li>
+</ul></li>
+<li><a href="#set-wheel-group-to-use-sudo">Set <code>wheel</code> group to use <em><strong>sudo</strong></em> !</a></li>
+<li><a href="#nest-step">Nest step</a></li>
+<li><a href="#if-you-want-to-uninstall-archwsl-please-run-dot-arch-dot-exe-clean-in-powershell">If you want to uninstall ArchWSL, Please run `./Arch.exe clean` in powershell</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <ul>
-<li>这是一个测试文件</li>
-</ul>
+      
+
+<h2 id="initialize-keyring-before-using-pacman-and-install-core-packages">Initialize keyring before using pacman and Install Core Packages</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacman-key --init
+pacman-key --populate
+pacman -Syyu base base-devel
+pacman -S git zsh vim</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="create-a-new-users-and-set-a-password">Create a new users and set a password</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -353,9 +382,63 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/usr/bin/env bash
-</span><span class="cp"></span>
-<span class="nb">echo</span> <span class="s2">&#34;Hello, Hugo!!!&#34;</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> -r -p <span class="s2">&#34;Please input a new username: &#34;</span> username
+<span class="nb">echo</span> <span class="s2">&#34;--&gt; </span><span class="nv">$username</span><span class="s2"> is you create a new user!&#34;</span>
+useradd -m -G wheel -s /bin/zsh <span class="s2">&#34;</span><span class="nv">$username</span><span class="s2">&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="set-a-password-for-root-dot">Set a password for root.</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;Please enter same password twice!&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;Set a Password for root: &#34;</span>
+passwd
+<span class="nb">echo</span> <span class="s2">&#34;Set a password for </span><span class="nv">$username</span><span class="s2"> :&#34;</span>
+passwd <span class="s2">&#34;</span><span class="nv">$username</span><span class="s2">&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="set-wheel-group-to-use-sudo">Set <code>wheel</code> group to use <em><strong>sudo</strong></em> !</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;Set wheel group to use sudo&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;%wheel ALL=(ALL) ALL&#34;</span> &gt;&gt;/etc/sudoers</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="nest-step">Nest step</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;You should exit the terminal, open Powershell &#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;Goto the folder containing Arch.exe,&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;Run the downlink command:&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;./Arch.exe config --default-user  </span><span class="nv">$username</span><span class="s2"> &#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;The next step is Restart computer and running arch_init.sh&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="if-you-want-to-uninstall-archwsl-please-run-dot-arch-dot-exe-clean-in-powershell">If you want to uninstall ArchWSL, Please run `./Arch.exe clean` in powershell</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">./</span><span class="n">Arch</span><span class="p">.</span><span class="n">exe</span> <span class="n">clean</span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -369,7 +452,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2019-03-19</span>
+    <span class="item-content">2019-03-10</span>
   </p>
   
   <p class="copyright-item">
@@ -388,20 +471,20 @@
       
       <nav class="post-nav">
         
-        
-          <a class="next" href="/post/archwslinit/">
-            <span class="next-text nav-default">Initialization archwsl(Windows Subsystem for ArchLinux)</span>
-            <span class="prev-text nav-mobile">Next</span>
+          <a class="prev" href="/post/first/">
             
             <i class="iconfont">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="18" height="18">
-  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
 </svg>
 
             </i>
+            <span class="prev-text nav-default">First</span>
+            <span class="prev-text nav-mobile">Prev</span>
           </a>
+        
       </nav>
     </footer>
   </article>
