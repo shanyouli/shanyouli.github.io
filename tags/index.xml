@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Time Cottage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://shanyouli.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://shanyouli.github.io/tags/linux/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://shanyouli.github.io/tags/shell/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
