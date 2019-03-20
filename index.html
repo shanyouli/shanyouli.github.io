@@ -330,7 +330,116 @@
   <div class="post-content">
     
     <div class="post-summary">
-      安装前的配置 设置键盘布局 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz loadkeys us 验证启动模式 1 2 ls /sys/firmware/efi/efivars # 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动 链接因特网 却保系统启用了网络
+      <h2 id="安装前的配置">安装前的配置</h2>
+
+<h3 id="设置键盘布局">设置键盘布局</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ls /usr/share/kbd/keymaps/**/*.map.gz
+loadkeys us</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="验证启动模式">验证启动模式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ls /sys/firmware/efi/efivars
+<span class="c1"># 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="链接因特网">链接因特网</h3>
+
+<h4 id="却保系统启用了网络接口-使用-ip-link-测试">却保系统启用了网络接口,使用 <code>ip link</code> 测试:</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ip link</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="连接网络-网线或无线网络">连接网络, 网线或无线网络</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">wifi-menu <span class="c1"># 使用无线网络</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="ping-判断是否连接到网络"><code>ping</code> 判断是否连接到网络</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ping -c <span class="m">3</span> archlinux.org</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="更新系统时间">更新系统时间</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">timedatectl set-ntp true</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="建立硬盘分区">建立硬盘分区</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 查看设备</span>
+fdisk -l
+
+<span class="c1"># 使用 fdisk or parted 修改分区 eg:</span>
+fdisk /dev/sdx</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="格式化当前分区">格式化当前分区</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkfs.ext4 -L <span class="s2">&#34;Rootfs&#34;</span> /dev/sdx2
+mkfs.swap -L <span class="s2">&#34;Swap&#34;</span> /dev/sdx3
+swapon /dev/sdx3
+mkfs.fat -s2 -F32 -L <span class="s2">&#34;EFI&#34;</span> /dev/sdx1</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="挂载分区">挂载分区</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mount /dev/sdx2 /mnt
+mkdir -p /mnt/boot
+mount /dev/sdx1 /mnt/boot</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="安装">安装</h2>
+
+<h3 id="配置镜像源-编辑-etc-pacman-dot-d-mirrorlist-将合适的源复制到最前面">配置镜像源&ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面</h3>
     </div>
     <div class="read-more">
       <a href="/post/install-arch/" class="read-more-link">Read more</a>

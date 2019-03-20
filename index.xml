@@ -18,9 +18,7 @@
       
       <guid>https://shanyouli.github.io/post/install-arch/</guid>
       
-        <description>
-
-&lt;h2 id=&#34;安装前的配置&#34;&gt;安装前的配置&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;安装前的配置&#34;&gt;安装前的配置&lt;/h2&gt;
 
 &lt;h3 id=&#34;设置键盘布局&#34;&gt;设置键盘布局&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -132,7 +130,7 @@ mount /dev/sdx1 /mnt/boot&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tab
 &lt;h3 id=&#34;配置镜像源-编辑-etc-pacman-dot-d-mirrorlist-将合适的源复制到最前面&#34;&gt;配置镜像源&amp;ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;eg:&lt;a href=&#34;https://shanyouli.github.io/ox-hugo/pacman-d-mirrorlist.png&#34;&gt;mirrorlist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;eg:&lt;img src=&#34;https://shanyouli.github.io/ox-hugo/pacman-d-mirrorlist.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;安装基本系统&#34;&gt;安装基本系统&lt;/h3&gt;
@@ -188,8 +186,21 @@ cat /mnt/etc/fstab&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;h4 id=&#34;编辑-etc-locale-dot-gen&#34;&gt;编辑 /etc/locale.gen&lt;/h4&gt;
 
+&lt;!--more--&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://shanyouli.github.io/ox-hugo/etc-locale.png&#34;&gt;/etc/locale.gen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://shanyouli.github.io/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://shanyouli.github.io/ox-hugo/etc-locale.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://shanyouli.github.io/ox-hugo/etc-locale.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;运行-locale-gen&#34;&gt;运行 &lt;code&gt;locale-gen&lt;/code&gt;&lt;/h4&gt;
