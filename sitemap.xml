@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://shanyouli.github.io/post/archlinux_aic94xx_warn/</loc>
+    <lastmod>2019-03-22T20:45:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-03-20T17:17:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -35,6 +42,13 @@
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://shanyouli.github.io/tags/archlinux/</loc>
+    <lastmod>2019-03-22T20:45:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -87,7 +101,7 @@
   
   <url>
     <loc>https://shanyouli.github.io/tags/</loc>
-    <lastmod>2019-03-22T20:40:57+08:00</lastmod>
+    <lastmod>2019-03-22T20:45:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

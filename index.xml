@@ -281,6 +281,68 @@ git pull&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
     </item>
     
     <item>
+      <title>archlinux 生成 initramfs-linux.img 的问题</title>
+      <link>https://shanyouli.github.io/post/archlinux_aic94xx_warn/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/post/archlinux_aic94xx_warn/</guid>
+      
+        <description>&lt;h2 id=&#34;program&#34;&gt;Program&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;运行 &lt;code&gt;mkinitcpio -p linux&lt;/code&gt; 时,出现下面的警告&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;WARNING: Possibly missing firmware for module: aic94xx
+WARNING: Possibly missing firmware for module: wd719x&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;解决方法-分别安装-aic94xx-firmware-和-wd719x-firmware&#34;&gt;解决方法,分别安装 &lt;em&gt;&lt;code&gt;aic94xx-firmware&lt;/code&gt;&lt;/em&gt; 和 &lt;em&gt;&lt;code&gt;wd719x-firmware&lt;/code&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://aur.archlinux.org/aic94xx-firmware.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aic94xx-firmware
+makepkg -sri&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://aur.archlinux.org/wd719x-firmware.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; wd719x-firmware
+makepkg -sri&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;再次运行-mkinitcpio-p-linux&#34;&gt;再次运行 &lt;strong&gt;mkinitcpio -p linux&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkinitcpio -p linux&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;参考-archlinux-mkinitcpio-warn&#34;&gt;参考 &lt;a href=&#34;https://gist.github.com/imrvelj/c65cd5ca7f5505a65e59204f5a3f7a6d&#34;&gt;archlinux-mkinitcpio_warn&lt;/a&gt;&lt;/h2&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Music Player Daemon 安装和配置</title>
       <link>https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate>
