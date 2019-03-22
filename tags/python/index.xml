@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Time Cottage</title>
+    <link>https://shanyouli.github.io/tags/python/</link>
+    <description>Recent content in Python on Time Cottage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://shanyouli.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python 版本切换</title>
+      <link>https://shanyouli.github.io/post/python_versions_switch/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/post/python_versions_switch/</guid>
+      <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 &lt;code&gt;print&lt;/code&gt; 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 &lt;code&gt;pyenv&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

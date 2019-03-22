@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Shanyouli" />
-  <meta name="description" content="安装前的配置 设置键盘布局 1 2  ls /usr/share/kbd/keymaps/**/*.map.gz loadkeys us   验证启动模式 1 2  ls /sys/firmware/efi/efivars # 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动   链接因特网 却保系统启用了网络接口,使用 ip link 测试: 1  ip link   连接网络, 网线或无线网络 1  wifi-menu # 使用无线网络   ping 判断是否连接到网络 1  ping -c 3 archlinux.org   更新系统时间 1  timedatectl set-ntp true   建立硬盘分区 1 2 3 4 5  # 查看设备 fdisk -l # 使用 fdisk or parted 修改分区 eg: fdisk /dev/sdx   格式化当前分区 1 2 3 4  mkfs.ext4 -L &amp;#34;Rootfs&amp;#34; /dev/sdx2 mkfs.swap -L &amp;#34;Swap&amp;#34; /dev/sdx3 swapon /dev/sdx3 mkfs.fat -s2 -F32 -L &amp;#34;EFI&amp;#34; /dev/sdx1   挂载分区 1 2 3  mount /dev/sdx2 /mnt mkdir -p /mnt/boot mount /dev/sdx1 /mnt/boot   安装 配置镜像源&amp;ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面" />
+  <meta name="description" content="安装前的配置 设置键盘布局 1 2  ls /usr/share/kbd/keymaps/**/*.map.gz loadkeys us  " />
 
   <meta name="keywords" content="Emacs, ArchLinux, Bash" />
 
@@ -72,108 +72,11 @@
 ls /usr/share/kbd/keymaps/**/*.map.gz
 loadkeys us
 
-
-验证启动模式
-
-
-1
-2
-
-
-ls /sys/firmware/efi/efivars
-# 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动
-
-
-链接因特网
-
-却保系统启用了网络接口,使用 ip link 测试:
-
-
-1
-
-
-ip link
-
-
-连接网络, 网线或无线网络
-
-
-1
-
-
-wifi-menu # 使用无线网络
-
-
-ping 判断是否连接到网络
-
-
-1
-
-
-ping -c 3 archlinux.org
-
-
-更新系统时间
-
-
-1
-
-
-timedatectl set-ntp true
-
-
-建立硬盘分区
-
-
-1
-2
-3
-4
-5
-
-
-# 查看设备
-fdisk -l
-
-# 使用 fdisk or parted 修改分区 eg:
-fdisk /dev/sdx
-
-
-格式化当前分区
-
-
-1
-2
-3
-4
-
-
-mkfs.ext4 -L &#34;Rootfs&#34; /dev/sdx2
-mkfs.swap -L &#34;Swap&#34; /dev/sdx3
-swapon /dev/sdx3
-mkfs.fat -s2 -F32 -L &#34;EFI&#34; /dev/sdx1
-
-
-挂载分区
-
-
-1
-2
-3
-
-
-mount /dev/sdx2 /mnt
-mkdir -p /mnt/boot
-mount /dev/sdx1 /mnt/boot
-
-
-安装
-
-配置镜像源&ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面" />
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shanyouli.github.io/post/install-arch/" />
 <meta property="article:published_time" content="2019-03-20T00:00:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-03-20T15:21:45&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-20T17:43:57&#43;08:00"/>
 
 <meta itemprop="name" content="安装 archlinux">
 <meta itemprop="description" content="安装前的配置
@@ -188,108 +91,11 @@ mount /dev/sdx1 /mnt/boot
 ls /usr/share/kbd/keymaps/**/*.map.gz
 loadkeys us
 
-
-验证启动模式
-
-
-1
-2
-
-
-ls /sys/firmware/efi/efivars
-# 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动
-
-
-链接因特网
-
-却保系统启用了网络接口,使用 ip link 测试:
-
-
-1
-
-
-ip link
-
-
-连接网络, 网线或无线网络
-
-
-1
-
-
-wifi-menu # 使用无线网络
-
-
-ping 判断是否连接到网络
-
-
-1
-
-
-ping -c 3 archlinux.org
-
-
-更新系统时间
-
-
-1
-
-
-timedatectl set-ntp true
-
-
-建立硬盘分区
-
-
-1
-2
-3
-4
-5
-
-
-# 查看设备
-fdisk -l
-
-# 使用 fdisk or parted 修改分区 eg:
-fdisk /dev/sdx
-
-
-格式化当前分区
-
-
-1
-2
-3
-4
-
-
-mkfs.ext4 -L &#34;Rootfs&#34; /dev/sdx2
-mkfs.swap -L &#34;Swap&#34; /dev/sdx3
-swapon /dev/sdx3
-mkfs.fat -s2 -F32 -L &#34;EFI&#34; /dev/sdx1
-
-
-挂载分区
-
-
-1
-2
-3
-
-
-mount /dev/sdx2 /mnt
-mkdir -p /mnt/boot
-mount /dev/sdx1 /mnt/boot
-
-
-安装
-
-配置镜像源&ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面">
+">
 
 
 <meta itemprop="datePublished" content="2019-03-20T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-20T15:21:45&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-20T17:43:57&#43;08:00" />
 <meta itemprop="wordCount" content="1060">
 
 
@@ -309,104 +115,7 @@ mount /dev/sdx1 /mnt/boot
 ls /usr/share/kbd/keymaps/**/*.map.gz
 loadkeys us
 
-
-验证启动模式
-
-
-1
-2
-
-
-ls /sys/firmware/efi/efivars
-# 如果目录存在,则使用 UEFI 模式启动, 反之使用 BIOS 或 CSM 模式启动
-
-
-链接因特网
-
-却保系统启用了网络接口,使用 ip link 测试:
-
-
-1
-
-
-ip link
-
-
-连接网络, 网线或无线网络
-
-
-1
-
-
-wifi-menu # 使用无线网络
-
-
-ping 判断是否连接到网络
-
-
-1
-
-
-ping -c 3 archlinux.org
-
-
-更新系统时间
-
-
-1
-
-
-timedatectl set-ntp true
-
-
-建立硬盘分区
-
-
-1
-2
-3
-4
-5
-
-
-# 查看设备
-fdisk -l
-
-# 使用 fdisk or parted 修改分区 eg:
-fdisk /dev/sdx
-
-
-格式化当前分区
-
-
-1
-2
-3
-4
-
-
-mkfs.ext4 -L &#34;Rootfs&#34; /dev/sdx2
-mkfs.swap -L &#34;Swap&#34; /dev/sdx3
-swapon /dev/sdx3
-mkfs.fat -s2 -F32 -L &#34;EFI&#34; /dev/sdx1
-
-
-挂载分区
-
-
-1
-2
-3
-
-
-mount /dev/sdx2 /mnt
-mkdir -p /mnt/boot
-mount /dev/sdx1 /mnt/boot
-
-
-安装
-
-配置镜像源&ndash;编辑 /etc/pacman.d/mirrorlist ,将合适的源复制到最前面"/>
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

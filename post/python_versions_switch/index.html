@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Music Player Daemon 安装和配置 - Time Cottage</title>
+  <title>Python 版本切换 - Time Cottage</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Shanyouli" />
-  <meta name="description" content="安装 mpd mpc ncmpcpp" />
+  <meta name="description" content="原因  今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本 是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时, 总是会出现关于 print 的警告，故想知道如何在 emacs 下自动切换 python 版本， 在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量 在 google 上了解到可以使用 pyenv
+" />
 
   <meta name="keywords" content="Emacs, ArchLinux, Bash" />
 
@@ -35,7 +36,7 @@
 <meta name="generator" content="Hugo 0.54.0" />
 
 
-<link rel="canonical" href="https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/" />
+<link rel="canonical" href="https://shanyouli.github.io/post/python_versions_switch/" />
 
 
 
@@ -59,27 +60,51 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="Music Player Daemon 安装和配置" />
-<meta property="og:description" content="安装 mpd mpc ncmpcpp" />
+<meta property="og:title" content="Python 版本切换" />
+<meta property="og:description" content="原因
+
+
+今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 print 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 pyenv
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://shanyouli.github.io/post/mpd%E9%85%8D%E7%BD%AE/" />
-<meta property="article:published_time" content="2019-03-20T00:00:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-03-20T17:17:31&#43;08:00"/>
+<meta property="og:url" content="https://shanyouli.github.io/post/python_versions_switch/" />
+<meta property="article:published_time" content="2019-03-22T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-22T20:40:57&#43;08:00"/>
 
-<meta itemprop="name" content="Music Player Daemon 安装和配置">
-<meta itemprop="description" content="安装 mpd mpc ncmpcpp">
-
-
-<meta itemprop="datePublished" content="2019-03-20T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-20T17:17:31&#43;08:00" />
-<meta itemprop="wordCount" content="312">
+<meta itemprop="name" content="Python 版本切换">
+<meta itemprop="description" content="原因
 
 
+今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 print 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 pyenv
+">
 
-<meta itemprop="keywords" content="music,linux,mpd," />
+
+<meta itemprop="datePublished" content="2019-03-22T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-22T20:40:57&#43;08:00" />
+<meta itemprop="wordCount" content="641">
+
+
+
+<meta itemprop="keywords" content="python,linux," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Music Player Daemon 安装和配置"/>
-<meta name="twitter:description" content="安装 mpd mpc ncmpcpp"/>
+<meta name="twitter:title" content="Python 版本切换"/>
+<meta name="twitter:description" content="原因
+
+
+今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 print 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 pyenv
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -315,11 +340,11 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Music Player Daemon 安装和配置</h1>
+      <h1 class="post-title">Python 版本切换</h1>
       
       <div class="post-meta">
-        <time datetime="2019-03-20" class="post-time">
-          2019-03-20
+        <time datetime="2019-03-22" class="post-time">
+          2019-03-22
         </time>
         
         
@@ -341,17 +366,35 @@
 <ul>
 <li>
 <ul>
-<li><a href="#安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp</a></li>
-<li><a href="#配置-mpd">配置 <code>mpd</code></a>
+<li><a href="#原因">原因</a></li>
+<li><a href="#安装-pyenv">安装 <em><strong>pyenv</strong></em></a>
 <ul>
-<li><a href="#创建并编辑-dot-config-mpd-mpd-dot-conf">创建并编辑 ~/.config/mpd/mpd.conf</a></li>
-<li><a href="#可能遇到的问题">可能遇到的问题</a>
+<li><a href="#第一个方法-下载运行-pyenv-dot-run-或者-pyenv-installer">第一个方法：下载运行 <code>pyenv.run</code> 或者 <code>pyenv-installer</code></a></li>
+<li><a href="#第二个方法-直接克隆-pyenv-包">第二个方法: 直接克隆 <code>pyenv</code> 包</a></li>
+<li><a href="#第三个方法-使用-linux-发行版自带的包管理器-archlinux-为例">第三个方法: 使用 Linux 发行版自带的包管理器, archlinux 为例</a></li>
+</ul></li>
+<li><a href="#配置-pyenv-root-和-path-环境变量">配置 <em><strong>PYENV_ROOT</strong></em> 和 <em><strong>PATH</strong></em> 环境变量</a></li>
+<li><a href="#在-dot-bashrc-中输入">在 <code>~/.bashrc</code> 中输入</a></li>
+<li><a href="#重启终端使这些改变生效">重启终端使这些改变生效</a></li>
+<li><a href="#安装并配置-pyenv-virtualenv">安装并配置 <code>pyenv-virtualenv</code></a>
 <ul>
-<li><a href="#第一个">第一个</a></li>
-<li><a href="#第二个">第二个</a></li>
-<li><a href="#第三个">第三个</a></li>
+<li><a href="#安装-pyenv-virtualenv">安装 <code>pyenv-virtualenv</code></a></li>
+<li><a href="#配置文件-在-dot-bashrc-中添加">配置文件，在 <code>~/.bashrc</code> 中添加</a></li>
+<li><a href="#重启终端使这些改变生效-1">重启终端使这些改变生效</a></li>
 </ul></li>
+<li><a href="#有关-pyenv-常用命令">有关 <code>pyenv</code> 常用命令</a></li>
+<li><a href="#pyenv-在-bash-上如何补全"><code>pyenv</code> 在 bash 上如何补全</a></li>
+<li><a href="#卸载-pyenv">卸载 <code>pyenv</code></a>
+<ul>
+<li><a href="#使用第一种和第二种方法的直接删除--pyenv-root">使用第一种和第二种方法的直接删除 $(pyenv -root)</a></li>
+<li><a href="#第三种方法">第三种方法</a></li>
 </ul></li>
+<li><a href="#更新-pyenv">更新 <code>pyenv</code></a>
+<ul>
+<li><a href="#第一种和第二种">第一种和第二种</a></li>
+<li><a href="#第三种方法-1">第三种方法</a></li>
+</ul></li>
+<li><a href="#参考">参考：</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -360,17 +403,19 @@
 
     
     <div class="post-content">
-      <h2 id="安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp</h2>
+      <h2 id="原因">原因</h2>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -Syu --needed --noconfirm mpd mpc ncmpcpp</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="配置-mpd">配置 <code>mpd</code></h2>
+<blockquote>
+<p>今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 <code>print</code> 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 <code>pyenv</code></p>
+</blockquote>
+
+<h2 id="安装-pyenv">安装 <em><strong>pyenv</strong></em></h2>
+
+<h3 id="第一个方法-下载运行-pyenv-dot-run-或者-pyenv-installer">第一个方法：下载运行 <code>pyenv.run</code> 或者 <code>pyenv-installer</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -378,190 +423,245 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir -p ~/.config/mpd/playlists
-
-touch ~/.config/mpd/<span class="o">{</span>database,log,pid,state,sticker,sql<span class="o">}</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">curl https://pyenv.run <span class="p">|</span> bash
+<span class="c1"># or</span>
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer <span class="p">|</span> bash</code></pre></td></tr></table>
 </div>
 </div>
-<!--more-->
-
-<h3 id="创建并编辑-dot-config-mpd-mpd-dot-conf">创建并编辑 ~/.config/mpd/mpd.conf</h3>
-
-<blockquote>
+<h3 id="第二个方法-直接克隆-pyenv-包">第二个方法: 直接克隆 <code>pyenv</code> 包</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"># Required files
-db_file            &#34;~/.config/mpd/database&#34;
-log_file           &#34;~/.config/mpd/log&#34;
-
-# Optional
-music_directory    &#34;~/Music&#34;
-playlist_directory &#34;~/.config/mpd/playlists&#34;
-pid_file           &#34;~/.config/mpd/pid&#34;
-state_file         &#34;~/.config/mpd/state&#34;
-sticker_file       &#34;~/.config/mpd/sticker.sql&#34;</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/pyenv/pyenv.git ~/.pyenv</code></pre></td></tr></table>
 </div>
-</div></blockquote>
-
-<h3 id="可能遇到的问题">可能遇到的问题</h3>
-
-<h4 id="第一个">第一个</h4>
-
-<blockquote>
-<p>listen: bind to &lsquo;0.0.0.0:6600&rsquo; failed: Address already in use (continuing anyway, because binding to &lsquo;[::]:6600&rsquo; succeeded)</p>
-</blockquote>
-
-<ul>
-<li><p>解决方法: 在 ~/.config/mpd/mpd.conf 中添加如下</p>
-
-<blockquote>
+</div>
+<h3 id="第三个方法-使用-linux-发行版自带的包管理器-archlinux-为例">第三个方法: 使用 Linux 发行版自带的包管理器, archlinux 为例</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">bind_to_address &#34;127.0.0.1&#34;
-port: &#34;6600&#34;</code></pre></td></tr></table>
-</div>
-</div></blockquote></li>
-
-<li><p><a href="https://wiki.archlinux.org/index.php/Music%5FPlayer%5FDaemon/Troubleshooting">参考</a></p></li>
-</ul>
-
-<h4 id="第二个">第二个</h4>
-
-<blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">hybrid_dsd: The Hybrid DSD decoder is disabled because it was not explicitly enable
-exception: Input plugin &#39;tidal&#39; is unavailable: No Tidal application token configured
-exception: Input plugin &#39;qobuz&#39; is unavailable: No Qobuz app_id configured</code></pre></td></tr></table>
-</div>
-</div></blockquote>
-
-<ul>
-<li><p>解决方法: 在 ~/.config/mpd/mpd.conf 中添加如下</p>
-
-<blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"># QOBUZ input plugin
-input {
-        enabled    &#34;no&#34;
-        plugin     &#34;qobuz&#34;
-#        app_id     &#34;ID&#34;
-#        app_secret &#34;SECRET&#34;
-#        username   &#34;USERNAME&#34;
-#        password   &#34;PASSWORD&#34;
-#        format_id  &#34;N&#34;
-}
-
-# TIDAL input plugin
-input {
-        enabled      &#34;no&#34;
-        plugin       &#34;tidal&#34;
-#        token        &#34;TOKEN&#34;
-#        username     &#34;USERNAME&#34;
-#        password     &#34;PASSWORD&#34;
-#        audioquality &#34;Q&#34;
-}
-
-# Decoder ######################################################################
-decoder {
-        plugin                  &#34;hybrid_dsd&#34;
-        enabled                 &#34;no&#34;
-#       gapless                 &#34;no&#34;
-}</code></pre></td></tr></table>
-</div>
-</div></blockquote></li>
-
-<li><p><a href="https://github.com/MusicPlayerDaemon/MPD/issues/430">参考</a></p></li>
-</ul>
-
-<h4 id="第三个">第三个</h4>
-
-<blockquote>
-<p>No &lsquo;audio_output&rsquo; defined in config file</p>
-</blockquote>
-
-<ul>
-<li><p>解决方法: 在 ~/.config/mpd/mpd.conf 中添加如下</p>
-
-<blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">audio_output {
-    type      &#34;alsa&#34;
-    name      &#34;Master&#34;
-##    device      &#34;hw:0,0&#34;    # optional
-##    mixer_type      &#34;hardware&#34;  # optional
-##    mixer_device    &#34;default&#34;   # optional
-##    mixer_control   &#34;PCM&#34;       # optional
-##    mixer_index &#34;0&#34;     # optional
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">yay -S pyenv
+<span class="c1"># or</span>
+git clone https://aur.archlinux.org/pyenv.git
+<span class="nb">cd</span> pyenv <span class="o">&amp;&amp;</span> makepkg -sri</code></pre></td></tr></table>
 </div>
-</div></blockquote></li>
+</div>
+<h2 id="配置-pyenv-root-和-path-环境变量">配置 <em><strong>PYENV_ROOT</strong></em> 和 <em><strong>PATH</strong></em> 环境变量</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s1">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&#34;PYENV_ROOT/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="在-dot-bashrc-中输入">在 <code>~/.bashrc</code> 中输入</h2>
 
-<li><p><a href="https://wiki.archlinux.org/index.php/Music%5FPlayer%5FDaemon/Troubleshooting">参考</a></p></li>
-</ul>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="nb">command</span> -v pyenv <span class="m">1</span>&gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">fi</span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+
+<h2 id="重启终端使这些改变生效">重启终端使这些改变生效</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exec</span> <span class="nv">$SHELL</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="安装并配置-pyenv-virtualenv">安装并配置 <code>pyenv-virtualenv</code></h2>
+
+<h3 id="安装-pyenv-virtualenv">安装 <code>pyenv-virtualenv</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/pyenv/pyenv-virtualenv.git <span class="k">$(</span>pyenv root<span class="k">)</span>/plugins/pyenv-virtualenv</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="配置文件-在-dot-bashrc-中添加">配置文件，在 <code>~/.bashrc</code> 中添加</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 在 export PATH=~/.pyenv/bin:$PATH 后面 添加</span>
+<span class="o">[[</span> -f <span class="k">$(</span>pyenv root<span class="k">)</span>/plugins/pyenv-virtualenv <span class="o">]]</span> <span class="o">&amp;&amp;{</span>
+    <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>pyenv virtualenv-init -<span class="k">)</span><span class="s2">&#34;</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="重启终端使这些改变生效-1">重启终端使这些改变生效</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exec</span> <span class="nv">$SHELL</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="有关-pyenv-常用命令">有关 <code>pyenv</code> 常用命令</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>pyenv install －－list</td>
+<td>查看可以安装的 python 版本</td>
+</tr>
+
+<tr>
+<td>pyenv install 2.7.16</td>
+<td>安装 python2.7.16 版本</td>
+</tr>
+
+<tr>
+<td>pyenv uninstall 2.7.16</td>
+<td>卸载 python2.7.16 版本</td>
+</tr>
+
+<tr>
+<td>pyenv versions</td>
+<td>查看已安装的版本</td>
+</tr>
+
+<tr>
+<td>python global  2.7.16</td>
+<td>全局版本设置为 python2.7.16</td>
+</tr>
+
+<tr>
+<td>pyenv local 2.7.16</td>
+<td>设置当前文件夹所使用的python版本为 2.7.16</td>
+</tr>
+
+<tr>
+<td>pyenv virtualenv 2.7.1 env271</td>
+<td>创建一个名为 <code>env271</code> 的虚拟环境<sup class="footnote-ref" id="fnref:fn-1"><a href="#fn:fn-1">1</a></sup></td>
+</tr>
+
+<tr>
+<td>pyenv activate env271</td>
+<td>激活并使用 <code>env271</code> 虚拟环境</td>
+</tr>
+
+<tr>
+<td>pyenv deactivate</td>
+<td>关闭虚拟环境,切换回系统环境</td>
+</tr>
+
+<tr>
+<td>pyenv uninstall env271</td>
+<td>卸载虚拟环境 <code>env271</code><sup class="footnote-ref" id="fnref:fn-2"><a href="#fn:fn-2">2</a></sup></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="pyenv-在-bash-上如何补全"><code>pyenv</code> 在 bash 上如何补全</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 在启用了 bash－completions 后，直接</span>
+<span class="c1"># shellcheck source=/dev/null</span>
+. <span class="s2">&#34;</span><span class="k">$(</span>penv root<span class="k">)</span><span class="s2">&#34;</span>/completions/pyenv.bash</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="卸载-pyenv">卸载 <code>pyenv</code></h2>
+
+<h3 id="使用第一种和第二种方法的直接删除--pyenv-root">使用第一种和第二种方法的直接删除 $(pyenv -root)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf ~/.pyenv</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="第三种方法">第三种方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yay -Rs pyenv
+<span class="c1"># or</span>
+pacman -Rs pyenv</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="更新-pyenv">更新 <code>pyenv</code></h2>
+
+<h3 id="第一种和第二种">第一种和第二种</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="k">$(</span>pyenv root<span class="k">)</span>
+git pull</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="第三种方法-1">第三种方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yay -Syu</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="参考">参考：</h2>
+
+<ol>
+<li><a href="https://github.com/pyenv/pyenv#advanced-configuration">pyenv 官网</a></li>
+<li><a href="http://python.jobbole.com/85153/">伯乐在线&mdash;Python多版本切换工具</a></li>
+</ol>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:fn-1">虚拟环境的位置为 <strong><code>$(pyenv root)/versions/env271</code></strong>
+ <a class="footnote-return" href="#fnref:fn-1"><sup>[return]</sup></a></li>
+<li id="fn:fn-2">或者直接删除它，rm -rf $(pyenv root)/versions/env271
+ <a class="footnote-return" href="#fnref:fn-2"><sup>[return]</sup></a></li>
+</ol>
+</div>
     </div>
 
     
@@ -573,7 +673,7 @@ decoder {
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2019-03-20</span>
+    <span class="item-content">2019-03-22</span>
   </p>
   
   <p class="copyright-item">
@@ -588,31 +688,17 @@ decoder {
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://shanyouli.github.io/tags/music/">music</a>
+          <a href="https://shanyouli.github.io/tags/python/">python</a>
           <a href="https://shanyouli.github.io/tags/linux/">linux</a>
-          <a href="https://shanyouli.github.io/tags/mpd/">mpd</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/python_versions_switch/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-            </i>
-            <span class="prev-text nav-default">Python 版本切换</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/install-arch/">
-            <span class="next-text nav-default">安装 archlinux</span>
+          <a class="next" href="/post/mpd%E9%85%8D%E7%BD%AE/">
+            <span class="next-text nav-default">Music Player Daemon 安装和配置</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">

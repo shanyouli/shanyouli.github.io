@@ -6,10 +6,279 @@
     <description>Recent content on Time Cottage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://shanyouli.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python 版本切换</title>
+      <link>https://shanyouli.github.io/post/python_versions_switch/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/post/python_versions_switch/</guid>
+      
+        <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;今天学习 python 时，在学习中所使用的版本为 python2.x ，而 archlinux 上默认版本
+是 python3.7, 无法直接使用 python-mode 模式下的一些功能，而且使用 flycheck 时,
+总是会出现关于 &lt;code&gt;print&lt;/code&gt; 的警告，故想知道如何在 emacs 下自动切换 python 版本，
+在 google 上没有发现合适的例子，想到可以指定一个文件夹中使用 python 的环境变量
+在 google 上了解到可以使用 &lt;code&gt;pyenv&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;安装-pyenv&#34;&gt;安装 &lt;em&gt;&lt;strong&gt;pyenv&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;第一个方法-下载运行-pyenv-dot-run-或者-pyenv-installer&#34;&gt;第一个方法：下载运行 &lt;code&gt;pyenv.run&lt;/code&gt; 或者 &lt;code&gt;pyenv-installer&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl https://pyenv.run &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
+&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;第二个方法-直接克隆-pyenv-包&#34;&gt;第二个方法: 直接克隆 &lt;code&gt;pyenv&lt;/code&gt; 包&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/pyenv/pyenv.git ~/.pyenv&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;第三个方法-使用-linux-发行版自带的包管理器-archlinux-为例&#34;&gt;第三个方法: 使用 Linux 发行版自带的包管理器, archlinux 为例&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yay -S pyenv
+&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+git clone https://aur.archlinux.org/pyenv.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; pyenv &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; makepkg -sri&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;配置-pyenv-root-和-path-环境变量&#34;&gt;配置 &lt;em&gt;&lt;strong&gt;PYENV_ROOT&lt;/strong&gt;&lt;/em&gt; 和 &lt;em&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/em&gt; 环境变量&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;在-dot-bashrc-中输入&#34;&gt;在 &lt;code&gt;~/.bashrc&lt;/code&gt; 中输入&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; -v pyenv &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;pyenv init -&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;重启终端使这些改变生效&#34;&gt;重启终端使这些改变生效&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SHELL&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;安装并配置-pyenv-virtualenv&#34;&gt;安装并配置 &lt;code&gt;pyenv-virtualenv&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;安装-pyenv-virtualenv&#34;&gt;安装 &lt;code&gt;pyenv-virtualenv&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/pyenv/pyenv-virtualenv.git &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;pyenv root&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/plugins/pyenv-virtualenv&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;配置文件-在-dot-bashrc-中添加&#34;&gt;配置文件，在 &lt;code&gt;~/.bashrc&lt;/code&gt; 中添加&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 在 export PATH=~/.pyenv/bin:$PATH 后面 添加&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; -f &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;pyenv root&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/plugins/pyenv-virtualenv &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;{&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;pyenv virtualenv-init -&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;重启终端使这些改变生效-1&#34;&gt;重启终端使这些改变生效&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SHELL&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;有关-pyenv-常用命令&#34;&gt;有关 &lt;code&gt;pyenv&lt;/code&gt; 常用命令&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;pyenv install －－list&lt;/td&gt;
+&lt;td&gt;查看可以安装的 python 版本&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv install 2.7.16&lt;/td&gt;
+&lt;td&gt;安装 python2.7.16 版本&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv uninstall 2.7.16&lt;/td&gt;
+&lt;td&gt;卸载 python2.7.16 版本&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv versions&lt;/td&gt;
+&lt;td&gt;查看已安装的版本&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;python global  2.7.16&lt;/td&gt;
+&lt;td&gt;全局版本设置为 python2.7.16&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv local 2.7.16&lt;/td&gt;
+&lt;td&gt;设置当前文件夹所使用的python版本为 2.7.16&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv virtualenv 2.7.1 env271&lt;/td&gt;
+&lt;td&gt;创建一个名为 &lt;code&gt;env271&lt;/code&gt; 的虚拟环境&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=&#34;#fn:fn-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv activate env271&lt;/td&gt;
+&lt;td&gt;激活并使用 &lt;code&gt;env271&lt;/code&gt; 虚拟环境&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv deactivate&lt;/td&gt;
+&lt;td&gt;关闭虚拟环境,切换回系统环境&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pyenv uninstall env271&lt;/td&gt;
+&lt;td&gt;卸载虚拟环境 &lt;code&gt;env271&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-2&#34;&gt;&lt;a href=&#34;#fn:fn-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;pyenv-在-bash-上如何补全&#34;&gt;&lt;code&gt;pyenv&lt;/code&gt; 在 bash 上如何补全&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 在启用了 bash－completions 后，直接&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# shellcheck source=/dev/null&lt;/span&gt;
+. &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;penv root&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;/completions/pyenv.bash&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;卸载-pyenv&#34;&gt;卸载 &lt;code&gt;pyenv&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;使用第一种和第二种方法的直接删除--pyenv-root&#34;&gt;使用第一种和第二种方法的直接删除 $(pyenv -root)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf ~/.pyenv&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;第三种方法&#34;&gt;第三种方法&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yay -Rs pyenv
+&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+pacman -Rs pyenv&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;更新-pyenv&#34;&gt;更新 &lt;code&gt;pyenv&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;第一种和第二种&#34;&gt;第一种和第二种&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;pyenv root&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+git pull&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;第三种方法-1&#34;&gt;第三种方法&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yay -Syu&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考：&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pyenv/pyenv#advanced-configuration&#34;&gt;pyenv 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://python.jobbole.com/85153/&#34;&gt;伯乐在线&amp;mdash;Python多版本切换工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:fn-1&#34;&gt;虚拟环境的位置为 &lt;strong&gt;&lt;code&gt;$(pyenv root)/versions/env271&lt;/code&gt;&lt;/strong&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:fn-1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:fn-2&#34;&gt;或者直接删除它，rm -rf $(pyenv root)/versions/env271
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:fn-2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+      
+    </item>
     
     <item>
       <title>Music Player Daemon 安装和配置</title>
