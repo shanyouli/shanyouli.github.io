@@ -6,10 +6,123 @@
     <description>Recent content on Time Cottage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://shanyouli.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>emacs 中使用 pyls 出现的问题解决</title>
+      <link>https://shanyouli.github.io/post/emacs_pyenv_config/</link>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://shanyouli.github.io/post/emacs_pyenv_config/</guid>
+      
+        <description>&lt;h2 id=&#34;第一个问题&#34;&gt;第一个问题&lt;/h2&gt;
+
+&lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在使用 &lt;code&gt;pyenv&lt;/code&gt; 时，无法正确确定 &lt;code&gt;python&lt;/code&gt; 版本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PATH 环境变量没有正确包含 &lt;code&gt;~/.pyenv/bin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;解决方法&#34;&gt;解决方法&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;添加正确的环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;  &lt;span class=&#34;err&#34;&gt;（&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add-to-list&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;exec-path&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/.pyenv/shims&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;exec-path-from-shell&lt;/code&gt; , 其配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;memq&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;window-system&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;mac&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ns&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;exec-path-from-shell&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;:init&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;exec-path-from-shell-initialize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;第二个问题&#34;&gt;第二个问题&lt;/h2&gt;
+
+&lt;h3 id=&#34;描述-1&#34;&gt;描述&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;当删除全局的 &lt;code&gt;python-language-server&lt;/code&gt; 后，使用所配置的本地环境中的 &lt;code&gt;pyls&lt;/code&gt; 时，
+总是不断重启 &lt;code&gt;pyls&lt;/code&gt; !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;原因-1&#34;&gt;原因&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;emacs 没有正确读取文件夹中 &lt;code&gt;.python_version&lt;/code&gt; 的值， 使用系统默认的版本来启动 &lt;code&gt;pyls&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;解决方法-安装-pyenv-mode-设置正确的当前文件夹中使用-python-的版本&#34;&gt;解决方法： 安装 &lt;code&gt;pyenv-mode&lt;/code&gt; 设置正确的当前文件夹中使用 &lt;code&gt;python&lt;/code&gt; 的版本&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;pyenv-mode-auto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add-hook&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;python-mode-hook&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;pyenv-mode-auto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;第三个问题&#34;&gt;第三个问题&lt;/h2&gt;
+
+&lt;h3 id=&#34;描述-2&#34;&gt;描述：&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Server pyls:xxxx exited with status signal. Do you want to restart it? (y or n)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;原因-2&#34;&gt;原因&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;由于第二个问题解决了时，=pyenv-mode-auto= 启动在 &lt;code&gt;lsp&lt;/code&gt; 之后，故需要在第一次运行
+&lt;code&gt;pyls&lt;/code&gt; 后， 重启一下 &lt;code&gt;pyls&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;解决-更改-lsp-restart-为-auto-start&#34;&gt;解决: 更改 &lt;code&gt;lsp-restart&lt;/code&gt; 为 &lt;code&gt;&#39;auto-start&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq-local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lsp-restart&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;auto-restart&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;或者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add-hook&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;python-mode-hook&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq-local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lsp-restart&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;auto-restart&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+      
+    </item>
     
     <item>
       <title>Python 版本切换</title>

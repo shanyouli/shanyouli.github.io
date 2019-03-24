@@ -64,7 +64,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://shanyouli.github.io/" />
 
-<meta property="og:updated_time" content="2019-03-22T00:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-03-24T00:00:00&#43;08:00"/>
 
 <meta itemprop="name" content="Time Cottage">
 <meta itemprop="description" content="这是我写一些记忆的私人时光小屋">
@@ -313,6 +313,78 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/emacs_pyenv_config/">emacs 中使用 pyls 出现的问题解决</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-24" class="post-time">
+        2019-03-24
+      </time>
+      
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <h2 id="第一个问题">第一个问题</h2>
+
+<h3 id="描述">描述</h3>
+
+<ul>
+<li>在使用 <code>pyenv</code> 时，无法正确确定 <code>python</code> 版本</li>
+</ul>
+
+<h3 id="原因">原因</h3>
+
+<ul>
+<li>PATH 环境变量没有正确包含 <code>~/.pyenv/bin</code></li>
+</ul>
+
+<h3 id="解决方法">解决方法</h3>
+
+<ul>
+<li>添加正确的环境变量</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp">  <span class="err">（</span><span class="nv">add-to-list</span> <span class="ss">&#39;exec-path</span> <span class="s">&#34;~/.pyenv/shims&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>使用 <code>exec-path-from-shell</code> , 其配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">memq</span> <span class="nf">window-system</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">mac</span> <span class="nv">ns</span> <span class="nv">x</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">use-package</span> <span class="nv">exec-path-from-shell</span>
+    <span class="nb">:init</span> <span class="p">(</span><span class="nv">exec-path-from-shell-initialize</span><span class="p">)))</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+    <div class="read-more">
+      <a href="/post/emacs_pyenv_config/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/python_versions_switch/">Python 版本切换</a>
     </h1>
     
@@ -514,51 +586,6 @@ loadkeys us</code></pre></td></tr></table>
 </article>
 
     
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/archwslinit/">Initialization archwsl(Windows Subsystem for ArchLinux)</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-10" class="post-time">
-        2019-03-10
-      </time>
-      
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <h2 id="initialize-keyring-before-using-pacman-and-install-core-package">Initialize Keyring before using pacman and install core package</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman-key --init
-pacman-key --populate
-pacman -Syyu base base-devel
-pacman -S git zsh vim</code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-    <div class="read-more">
-      <a href="/post/archwslinit/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-    
   </section>
 
   
@@ -578,6 +605,22 @@ pacman -S git zsh vim</code></pre></td></tr></table>
 
   
   
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li  class="active" >
+        <a href="/">1</a>
+      </li>
+      
+      <li >
+        <a href="/page/2/">2</a>
+      </li>
+      
+    </ul>
+  </nav>
 
   
   
