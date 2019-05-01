@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elisp on Time Cottage</title>
+    <title>elisp on Time Cottage</title>
     <link>https://shanyouli.github.io/tags/elisp/</link>
-    <description>Recent content in Elisp on Time Cottage</description>
+    <description>Recent content in elisp on Time Cottage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0800</lastBuildDate>
