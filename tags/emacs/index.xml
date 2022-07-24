@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>emacs on Virgo</title><link>https://ovirgo.com/tags/emacs/</link><description>Recent content in emacs on Virgo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://ovirgo.com/tags/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>emacs 中使用 pyls 出现的问题解决</title><link>https://ovirgo.com/posts/emacs_pyenv_config/</link><pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate><guid>https://ovirgo.com/posts/emacs_pyenv_config/</guid><description>&lt;h2 id="第一个问题">第一个问题&lt;/h2>
+&lt;h3 id="描述">描述&lt;/h3>
+&lt;ul>
+&lt;li>在使用 &lt;code>pyenv&lt;/code> 时，无法正确确定 &lt;code>python&lt;/code> 版本&lt;/li>
+&lt;/ul>
+&lt;h3 id="原因">原因&lt;/h3>
+&lt;ul>
+&lt;li>PATH 环境变量没有正确包含 &lt;code>~/.pyenv/bin&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="解决方法">解决方法&lt;/h3>
+&lt;ul>
+&lt;li>添加正确的环境变量&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">（&lt;/span>&lt;span style="color:#008080">add-to-list&lt;/span> &lt;span style="color:#990073">&amp;#39;exec-path&lt;/span> &lt;span style="color:#d14">&amp;#34;~/.pyenv/shims&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>使用 &lt;code>exec-path-from-shell&lt;/code> , 其配置&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#0086b3">when&lt;/span> (&lt;span style="color:#900;font-weight:bold">memq&lt;/span> &lt;span style="color:#900;font-weight:bold">window-system&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;#39;&lt;/span>(&lt;span style="color:#008080">mac&lt;/span> &lt;span style="color:#008080">ns&lt;/span> &lt;span style="color:#008080">x&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (&lt;span style="color:#0086b3">use-package&lt;/span> &lt;span style="color:#008080">exec-path-from-shell&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0086b3">:init&lt;/span> (&lt;span style="color:#008080">exec-path-from-shell-initialize&lt;/span>)))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

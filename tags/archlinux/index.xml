@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>archlinux on Virgo</title><link>https://ovirgo.com/tags/archlinux/</link><description>Recent content in archlinux on Virgo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://ovirgo.com/tags/archlinux/index.xml" rel="self" type="application/rss+xml"/><item><title>archlinux 生成 initramfs-linux.img 的问题</title><link>https://ovirgo.com/posts/archlinux_aic94xx_warn/</link><pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate><guid>https://ovirgo.com/posts/archlinux_aic94xx_warn/</guid><description>&lt;h2 id="program">Program&lt;/h2>
+&lt;ul>
+&lt;li>运行 &lt;code>mkinitcpio -p linux&lt;/code> 时,出现下面的警告&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;pre tabindex="0">&lt;code class="language-nil" data-lang="nil">WARNING: Possibly missing firmware for module: aic94xx
+WARNING: Possibly missing firmware for module: wd719x
+&lt;/code>&lt;/pre>&lt;/blockquote></description></item></channel></rss>
