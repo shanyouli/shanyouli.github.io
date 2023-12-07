@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 时光旅馆 by Lye</title><link>https://shanyouli.github.io/posts/</link><description>Recent content in Posts on 时光旅馆 by Lye</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyouli.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>lua 字符串匹配</title><link>https://shanyouli.github.io/posts/20231207203039-lua_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</link><pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/20231207203039-lua_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</guid><description>常用函数 string.find(s, pattern[, init[, plain]]) 参数: s: 将要匹配字符串 pattern: 匹配字符 init: 可选参数， 从那个引索开始匹配，默认从头(引索为 1)</description></item><item><title>upic 配置</title><link>https://shanyouli.github.io/posts/20230611221200-upic_%E9%85%8D%E7%BD%AE/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/20230611221200-upic_%E9%85%8D%E7%BD%AE/</guid><description>github 配置项说明 以 https://github.com/owner/oss 为例 owner: 仓库所有者 owner repo: 仓库名 oss branch: 使用分支，现在一般默认为 main domain: 当你仓库开启了 pages 功能，且配</description></item><item><title>docker学习</title><link>https://shanyouli.github.io/posts/20230330194222-docker%E5%AD%A6%E4%B9%A0/</link><pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/20230330194222-docker%E5%AD%A6%E4%B9%A0/</guid><description>在 vps 上安装 dock vps 系统 ubuntu 更新源，安装必须应用 sudo apt-get update sudo apt-get install ce-certificates curl gnupg 添加 docker 官方 gpg key sudo mkdir -m 0755 -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --daermor -o</description></item><item><title>使用github_Actions自动部署Hugo站点</title><link>https://shanyouli.github.io/posts/%E4%BD%BF%E7%94%A8github_actions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hugo%E7%AB%99%E7%82%B9/</link><pubDate>Sat, 08 Oct 2022 12:05:31 +0800</pubDate><guid>https://shanyouli.github.io/posts/%E4%BD%BF%E7%94%A8github_actions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hugo%E7%AB%99%E7%82%B9/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 时光旅馆 by Lye</title><link>https://shanyouli.github.io/posts/</link><description>Recent content in Posts on 时光旅馆 by Lye</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://shanyouli.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>lua 字符串匹配</title><link>https://shanyouli.github.io/posts/20231207203039-lua_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</link><pubDate>Thu, 07 Dec 2023 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/20231207203039-lua_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</guid><description>常用函数 string.find(s, pattern[, init[, plain]]) 参数: s: 将要匹配字符串 pattern: 匹配字符 init: 可选参数， 从那个引索开始匹配，默认从头(引索为 1)开始匹配 plain: 可选参数， 为 true 时，普通字符串匹配，默认正则匹配 返回</description></item><item><title>upic 配置</title><link>https://shanyouli.github.io/posts/20230611221200-upic_%E9%85%8D%E7%BD%AE/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/20230611221200-upic_%E9%85%8D%E7%BD%AE/</guid><description>github 配置项说明 以 https://github.com/owner/oss 为例 owner: 仓库所有者 owner repo: 仓库名 oss branch: 使用分支，现在一般默认为 main domain: 当你仓库开启了 pages 功能，且配置好自定义域名，就可以设置该选项 token: Github 的个人访问令牌，获取方式</description></item><item><title>docker学习</title><link>https://shanyouli.github.io/posts/20230330194222-docker%E5%AD%A6%E4%B9%A0/</link><pubDate>Thu, 30 Mar 2023 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/20230330194222-docker%E5%AD%A6%E4%B9%A0/</guid><description>在 vps 上安装 dock vps 系统 ubuntu 更新源，安装必须应用 1 2 sudo apt-get update sudo apt-get install ce-certificates curl gnupg 添加 docker 官方 gpg key 1 2 3 sudo mkdir -m 0755 -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --daermor -o /etc/apt/keyrings/docker.gpg 设置 docker 仓库并启用它 1 2 3 4 echo \ &amp;#34;deb [arch=&amp;#34;$(dpkg --print-architecture)&amp;#34; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &amp;#34;$(. /etc/os-release &amp;amp;&amp;amp;</description></item><item><title>使用github_Actions自动部署Hugo站点</title><link>https://shanyouli.github.io/posts/%E4%BD%BF%E7%94%A8github_actions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hugo%E7%AB%99%E7%82%B9/</link><pubDate>Sat, 08 Oct 2022 12:05:31 +0800</pubDate><guid>https://shanyouli.github.io/posts/%E4%BD%BF%E7%94%A8github_actions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hugo%E7%AB%99%E7%82%B9/</guid><description>&lt;p>
 记录一下如何使用 Github Actions 部署 Hugo 站点&lt;/p></description></item><item><title>Easy Hugo使用</title><link>https://shanyouli.github.io/posts/easy-hugo%E4%BD%BF%E7%94%A8/</link><pubDate>Sun, 17 Jul 2022 13:21:24 +0800</pubDate><guid>https://shanyouli.github.io/posts/easy-hugo%E4%BD%BF%E7%94%A8/</guid><description>&lt;p>
-好久没有写 blog 了，我决定重新折腾 hugo 生成 blog&lt;/p></description></item><item><title>emacs 中使用 pyls 出现的问题解决</title><link>https://shanyouli.github.io/posts/emacs_pyenv_config/</link><pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/emacs_pyenv_config/</guid><description>&lt;h2 id="第一个问题">第一个问题&lt;/h2>
+好久没有写 blog 了，我决定重新折腾 hugo 生成 blog&lt;/p></description></item><item><title>emacs 中使用 pyls 出现的问题解决</title><link>https://shanyouli.github.io/posts/emacs_pyenv_config/</link><pubDate>Sun, 24 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/emacs_pyenv_config/</guid><description>&lt;h2 id="第一个问题">第一个问题&lt;/h2>
 &lt;h3 id="描述">描述&lt;/h3>
 &lt;ul>
 &lt;li>在使用 &lt;code>pyenv&lt;/code> 时，无法正确确定 &lt;code>python&lt;/code> 版本&lt;/li>
@@ -13,39 +13,82 @@
 &lt;ul>
 &lt;li>添加正确的环境变量&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">（&lt;/span>&lt;span style="color:#008080">add-to-list&lt;/span> &lt;span style="color:#990073">&amp;#39;exec-path&lt;/span> &lt;span style="color:#d14">&amp;#34;~/.pyenv/shims&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">（&lt;/span>&lt;span style="color:#008080">add-to-list&lt;/span> &lt;span style="color:#990073">&amp;#39;exec-path&lt;/span> &lt;span style="color:#d14">&amp;#34;~/.pyenv/shims&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
 &lt;li>使用 &lt;code>exec-path-from-shell&lt;/code> , 其配置&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#0086b3">when&lt;/span> (&lt;span style="color:#900;font-weight:bold">memq&lt;/span> &lt;span style="color:#900;font-weight:bold">window-system&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;#39;&lt;/span>(&lt;span style="color:#008080">mac&lt;/span> &lt;span style="color:#008080">ns&lt;/span> &lt;span style="color:#008080">x&lt;/span>))
+&lt;div class="highlight">&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#0086b3">when&lt;/span> (&lt;span style="color:#900;font-weight:bold">memq&lt;/span> &lt;span style="color:#900;font-weight:bold">window-system&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;#39;&lt;/span>(&lt;span style="color:#008080">mac&lt;/span> &lt;span style="color:#008080">ns&lt;/span> &lt;span style="color:#008080">x&lt;/span>))
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (&lt;span style="color:#0086b3">use-package&lt;/span> &lt;span style="color:#008080">exec-path-from-shell&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0086b3">:init&lt;/span> (&lt;span style="color:#008080">exec-path-from-shell-initialize&lt;/span>)))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>archlinux 生成 initramfs-linux.img 的问题</title><link>https://shanyouli.github.io/posts/archlinux_aic94xx_warn/</link><pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/archlinux_aic94xx_warn/</guid><description>&lt;h2 id="program">Program&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>archlinux 生成 initramfs-linux.img 的问题</title><link>https://shanyouli.github.io/posts/archlinux_aic94xx_warn/</link><pubDate>Fri, 22 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/archlinux_aic94xx_warn/</guid><description>&lt;h2 id="program">Program&lt;/h2>
 &lt;ul>
 &lt;li>运行 &lt;code>mkinitcpio -p linux&lt;/code> 时,出现下面的警告&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;pre tabindex="0">&lt;code class="language-nil" data-lang="nil">WARNING: Possibly missing firmware for module: aic94xx
 WARNING: Possibly missing firmware for module: wd719x
-&lt;/code>&lt;/pre>&lt;/blockquote></description></item><item><title>Python 版本切换</title><link>https://shanyouli.github.io/posts/python_versions_switch/</link><pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/python_versions_switch/</guid><description>&lt;h2 id="原因">原因&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/blockquote></description></item><item><title>Python 版本切换</title><link>https://shanyouli.github.io/posts/python_versions_switch/</link><pubDate>Fri, 22 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/python_versions_switch/</guid><description>&lt;h2 id="原因">原因&lt;/h2>
 &lt;ol>
 &lt;li>今天学习 python 时，所需要的版本为 python2.x，而 archlinux 上默认版本是 python3.7, 无法直接使用 python-mode 模式下的一些功能，&lt;/li>
 &lt;li>使用 flycheck 时, 总是会出现关于 &lt;code>print&lt;/code> 的警告，&lt;/li>
 &lt;li>想知道如何在 emacs 下自动切换 python 版本，但 google 上没有发现合适的例子&lt;/li>
 &lt;li>想到可以指定一个文件夹中使用 python 的环境变量, 在 google 上了解到可以使用 &lt;code>pyenv&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>Music Player Daemon 安装和配置</title><link>https://shanyouli.github.io/posts/mpd%E9%85%8D%E7%BD%AE/</link><pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/mpd%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 id="安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp&lt;/h2></description></item><item><title>安装 archlinux</title><link>https://shanyouli.github.io/posts/install-arch/</link><pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/install-arch/</guid><description>&lt;h2 id="安装前的配置">安装前的配置&lt;/h2>
+&lt;/ol></description></item><item><title>Music Player Daemon 安装和配置</title><link>https://shanyouli.github.io/posts/mpd%E9%85%8D%E7%BD%AE/</link><pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/mpd%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 id="安装-mpd-mpc-ncmpcpp">安装 mpd mpc ncmpcpp&lt;/h2></description></item><item><title>安装 archlinux</title><link>https://shanyouli.github.io/posts/install-arch/</link><pubDate>Wed, 20 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/install-arch/</guid><description>&lt;h2 id="安装前的配置">安装前的配置&lt;/h2>
 &lt;h3 id="设置键盘布局">设置键盘布局&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ls /usr/share/kbd/keymaps/**/*.map.gz
+&lt;div class="highlight">&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ls /usr/share/kbd/keymaps/**/*.map.gz
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>loadkeys us
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>First</title><link>https://shanyouli.github.io/posts/first/</link><pubDate>Tue, 19 Mar 2019 23:52:51 +0800</pubDate><guid>https://shanyouli.github.io/posts/first/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>First</title><link>https://shanyouli.github.io/posts/first/</link><pubDate>Tue, 19 Mar 2019 23:52:51 +0800</pubDate><guid>https://shanyouli.github.io/posts/first/</guid><description>&lt;ul>
 &lt;li>这是一个测试文件&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/usr/bin/env bash
+&lt;div class="highlight">&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/usr/bin/env bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;Hello, Hugo!!!&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Initialization archwsl(Windows Subsystem for ArchLinux)</title><link>https://shanyouli.github.io/posts/archwslinit/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://shanyouli.github.io/posts/archwslinit/</guid><description>&lt;h2 id="initialize-keyring-before-using-pacman-and-install-core-package">Initialize Keyring before using pacman and install core package&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman-key --init
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Initialization archwsl(Windows Subsystem for ArchLinux)</title><link>https://shanyouli.github.io/posts/archwslinit/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0800</pubDate><guid>https://shanyouli.github.io/posts/archwslinit/</guid><description>&lt;h2 id="initialize-keyring-before-using-pacman-and-install-core-package">Initialize Keyring before using pacman and install core package&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman-key --init
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pacman-key --populate
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pacman -Syyu base base-devel
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pacman -S git zsh vim
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

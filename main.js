@@ -159,7 +159,7 @@
               if (e3[n3] === t3)
                 return n3;
             return -1;
-          }, R2 = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped", M2 = "[\\x20\\t\\r\\n\\f]", I2 = "(?:\\\\[\\da-fA-F]{1,6}" + M2 + "?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+", W2 = "\\[" + M2 + "*(" + I2 + ")(?:" + M2 + "*([*^$|!~]?=)" + M2 + `*(?:'((?:\\\\.|[^\\\\'])*)'|"((?:\\\\.|[^\\\\"])*)"|(` + I2 + "))|)" + M2 + "*\\]", F2 = ":(" + I2 + `)(?:\\((('((?:\\\\.|[^\\\\'])*)'|"((?:\\\\.|[^\\\\"])*)")|((?:\\\\.|[^\\\\()[\\]]|` + W2 + ")*)|.*)\\)|)", B2 = new RegExp(M2 + "+", "g"), $16 = new RegExp("^" + M2 + "+|((?:^|[^\\\\])(?:\\\\.)*)" + M2 + "+$", "g"), _2 = new RegExp("^" + M2 + "*," + M2 + "*"), z2 = new RegExp("^" + M2 + "*([>+~]|" + M2 + ")" + M2 + "*"), U2 = new RegExp(M2 + "|>"), X2 = new RegExp(F2), V2 = new RegExp("^" + I2 + "$"), G2 = { ID: new RegExp("^#(" + I2 + ")"), CLASS: new RegExp("^\\.(" + I2 + ")"), TAG: new RegExp("^(" + I2 + "|[*])"), ATTR: new RegExp("^" + W2), PSEUDO: new RegExp("^" + F2), CHILD: new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + M2 + "*(even|odd|(([+-]|)(\\d*)n|)" + M2 + "*(?:([+-]|)" + M2 + "*(\\d+)|))" + M2 + "*\\)|)", "i"), bool: new RegExp("^(?:" + R2 + ")$", "i"), needsContext: new RegExp("^" + M2 + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + M2 + "*((?:-\\d)?\\d*)" + M2 + "*\\)|)(?=[^-]|$)", "i") }, Y2 = /HTML$/i, Q2 = /^(?:input|select|textarea|button)$/i, J2 = /^h\d$/i, K2 = /^[^{]+\{\s*\[native \w/, Z2 = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/, ee2 = /[+~]/, te2 = new RegExp("\\\\[\\da-fA-F]{1,6}" + M2 + "?|\\\\([^\\r\\n\\f])", "g"), ne2 = function(e3, t3) {
+          }, R2 = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped", M2 = "[\\x20\\t\\r\\n\\f]", I2 = "(?:\\\\[\\da-fA-F]{1,6}" + M2 + "?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+", W2 = "\\[" + M2 + "*(" + I2 + ")(?:" + M2 + "*([*^$|!~]?=)" + M2 + `*(?:'((?:\\\\.|[^\\\\'])*)'|"((?:\\\\.|[^\\\\"])*)"|(` + I2 + "))|)" + M2 + "*\\]", F2 = ":(" + I2 + `)(?:\\((('((?:\\\\.|[^\\\\'])*)'|"((?:\\\\.|[^\\\\"])*)")|((?:\\\\.|[^\\\\()[\\]]|` + W2 + ")*)|.*)\\)|)", B2 = new RegExp(M2 + "+", "g"), $12 = new RegExp("^" + M2 + "+|((?:^|[^\\\\])(?:\\\\.)*)" + M2 + "+$", "g"), _2 = new RegExp("^" + M2 + "*," + M2 + "*"), z2 = new RegExp("^" + M2 + "*([>+~]|" + M2 + ")" + M2 + "*"), U2 = new RegExp(M2 + "|>"), X2 = new RegExp(F2), V2 = new RegExp("^" + I2 + "$"), G2 = { ID: new RegExp("^#(" + I2 + ")"), CLASS: new RegExp("^\\.(" + I2 + ")"), TAG: new RegExp("^(" + I2 + "|[*])"), ATTR: new RegExp("^" + W2), PSEUDO: new RegExp("^" + F2), CHILD: new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + M2 + "*(even|odd|(([+-]|)(\\d*)n|)" + M2 + "*(?:([+-]|)" + M2 + "*(\\d+)|))" + M2 + "*\\)|)", "i"), bool: new RegExp("^(?:" + R2 + ")$", "i"), needsContext: new RegExp("^" + M2 + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + M2 + "*((?:-\\d)?\\d*)" + M2 + "*\\)|)(?=[^-]|$)", "i") }, Y2 = /HTML$/i, Q2 = /^(?:input|select|textarea|button)$/i, J2 = /^h\d$/i, K2 = /^[^{]+\{\s*\[native \w/, Z2 = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/, ee2 = /[+~]/, te2 = new RegExp("\\\\[\\da-fA-F]{1,6}" + M2 + "?|\\\\([^\\r\\n\\f])", "g"), ne2 = function(e3, t3) {
             var n3 = "0x" + e3.slice(1) - 65536;
             return t3 || (n3 < 0 ? String.fromCharCode(n3 + 65536) : String.fromCharCode(n3 >> 10 | 55296, 1023 & n3 | 56320));
           }, re2 = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g, ie2 = function(e3, t3) {
@@ -217,7 +217,7 @@
                 }
               }
             }
-            return g2(t3.replace($16, "$1"), e3, n3, r3);
+            return g2(t3.replace($12, "$1"), e3, n3, r3);
           }
           function ue2() {
             var r3 = [];
@@ -490,7 +490,7 @@
               return a3(e4, 0, t3);
             }) : a3;
           } }, pseudos: { not: le2(function(e3) {
-            var r3 = [], i3 = [], s3 = f2(e3.replace($16, "$1"));
+            var r3 = [], i3 = [], s3 = f2(e3.replace($12, "$1"));
             return s3[S2] ? le2(function(e4, t3, n3, r4) {
               var i4, o3 = s3(e4, null, r4, []), a3 = e4.length;
               while (a3--)
@@ -662,7 +662,7 @@
                   for (n3 = ++s3; n3 < r3; n3++)
                     if (b2.relative[e3[n3].type])
                       break;
-                  return Ce2(1 < s3 && we2(c3), 1 < s3 && xe2(e3.slice(0, s3 - 1).concat({ value: " " === e3[s3 - 2].type ? "*" : "" })).replace($16, "$1"), t3, s3 < n3 && Ee2(e3.slice(s3, n3)), n3 < r3 && Ee2(e3 = e3.slice(n3)), n3 < r3 && xe2(e3));
+                  return Ce2(1 < s3 && we2(c3), 1 < s3 && xe2(e3.slice(0, s3 - 1).concat({ value: " " === e3[s3 - 2].type ? "*" : "" })).replace($12, "$1"), t3, s3 < n3 && Ee2(e3.slice(s3, n3)), n3 < r3 && Ee2(e3 = e3.slice(n3)), n3 < r3 && xe2(e3));
                 }
                 c3.push(t3);
               }
@@ -674,7 +674,7 @@
               return t3 ? 0 : l3.slice(0);
             a3 = e3, s3 = [], u3 = b2.preFilter;
             while (a3) {
-              for (o3 in n3 && !(r3 = _2.exec(a3)) || (r3 && (a3 = a3.slice(r3[0].length) || a3), s3.push(i3 = [])), n3 = false, (r3 = z2.exec(a3)) && (n3 = r3.shift(), i3.push({ value: n3, type: r3[0].replace($16, " ") }), a3 = a3.slice(n3.length)), b2.filter)
+              for (o3 in n3 && !(r3 = _2.exec(a3)) || (r3 && (a3 = a3.slice(r3[0].length) || a3), s3.push(i3 = [])), n3 = false, (r3 = z2.exec(a3)) && (n3 = r3.shift(), i3.push({ value: n3, type: r3[0].replace($12, " ") }), a3 = a3.slice(n3.length)), b2.filter)
                 !(r3 = G2[o3].exec(a3)) || u3[o3] && !(r3 = u3[o3](r3)) || (n3 = r3.shift(), i3.push({ value: n3, type: o3, matches: r3 }), a3 = a3.slice(n3.length));
               if (!n3)
                 break;
@@ -1029,11 +1029,11 @@
         }, S.extend({ isReady: false, readyWait: 1, ready: function(e2) {
           (true === e2 ? --S.readyWait : S.isReady) || (S.isReady = true) !== e2 && 0 < --S.readyWait || F.resolveWith(E, [S]);
         } }), S.ready.then = F.then, "complete" === E.readyState || "loading" !== E.readyState && !E.documentElement.doScroll ? C.setTimeout(S.ready) : (E.addEventListener("DOMContentLoaded", B), C.addEventListener("load", B));
-        var $15 = function(e2, t2, n2, r2, i2, o2, a2) {
+        var $11 = function(e2, t2, n2, r2, i2, o2, a2) {
           var s2 = 0, u2 = e2.length, l2 = null == n2;
           if ("object" === w(n2))
             for (s2 in i2 = true, n2)
-              $15(e2, t2, s2, n2[s2], true, o2, a2);
+              $11(e2, t2, s2, n2[s2], true, o2, a2);
           else if (void 0 !== r2 && (i2 = true, m(r2) || (a2 = true), l2 && (a2 ? (t2.call(e2, r2), t2 = null) : (l2 = t2, t2 = function(e3, t3, n3) {
             return l2.call(S(e3), n3);
           })), t2))
@@ -1119,7 +1119,7 @@
           }
           return "object" == typeof n2 ? this.each(function() {
             Q.set(this, n2);
-          }) : $15(this, function(e3) {
+          }) : $11(this, function(e3) {
             var t3;
             if (o2 && void 0 === e3)
               return void 0 !== (t3 = Q.get(o2, n2)) ? t3 : void 0 !== (t3 = Z(o2, n2)) ? t3 : void 0;
@@ -1475,7 +1475,7 @@
         }, remove: function(e2) {
           return Oe(this, e2);
         }, text: function(e2) {
-          return $15(this, function(e3) {
+          return $11(this, function(e3) {
             return void 0 === e3 ? S.text(this) : this.empty().each(function() {
               1 !== this.nodeType && 11 !== this.nodeType && 9 !== this.nodeType || (this.textContent = e3);
             });
@@ -1508,7 +1508,7 @@
             return S.clone(this, e2, t2);
           });
         }, html: function(e2) {
-          return $15(this, function(e3) {
+          return $11(this, function(e3) {
             var t2 = this[0] || {}, n2 = 0, r2 = this.length;
             if (void 0 === e3 && 1 === t2.nodeType)
               return t2.innerHTML;
@@ -1657,7 +1657,7 @@
             return n2;
           } }, "margin" !== i2 && (S.cssHooks[i2 + o2].set = Ye);
         }), S.fn.extend({ css: function(e2, t2) {
-          return $15(this, function(e3, t3, n2) {
+          return $11(this, function(e3, t3, n2) {
             var r2, i2, o2 = {}, a2 = 0;
             if (Array.isArray(t3)) {
               for (r2 = Re(e3), i2 = t3.length; a2 < i2; a2++)
@@ -1843,7 +1843,7 @@
         }, tt = E.createElement("input"), nt = E.createElement("select").appendChild(E.createElement("option")), tt.type = "checkbox", y.checkOn = "" !== tt.value, y.optSelected = nt.selected, (tt = E.createElement("input")).value = "t", tt.type = "radio", y.radioValue = "t" === tt.value;
         var ct, ft = S.expr.attrHandle;
         S.fn.extend({ attr: function(e2, t2) {
-          return $15(this, S.attr, e2, t2, 1 < arguments.length);
+          return $11(this, S.attr, e2, t2, 1 < arguments.length);
         }, removeAttr: function(e2) {
           return this.each(function() {
             S.removeAttr(this, e2);
@@ -1882,7 +1882,7 @@
           return Array.isArray(e2) ? e2 : "string" == typeof e2 && e2.match(P) || [];
         }
         S.fn.extend({ prop: function(e2, t2) {
-          return $15(this, S.prop, e2, t2, 1 < arguments.length);
+          return $11(this, S.prop, e2, t2, 1 < arguments.length);
         }, removeProp: function(e2) {
           return this.each(function() {
             delete this[S.propFix[e2] || e2];
@@ -2399,7 +2399,7 @@
         } }), S.each({ scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function(t2, i2) {
           var o2 = "pageYOffset" === i2;
           S.fn[t2] = function(e2) {
-            return $15(this, function(e3, t3, n2) {
+            return $11(this, function(e3, t3, n2) {
               var r2;
               if (x(e3) ? r2 = e3 : 9 === e3.nodeType && (r2 = e3.defaultView), void 0 === n2)
                 return r2 ? r2[i2] : e3[t3];
@@ -2415,7 +2415,7 @@
           S.each({ padding: "inner" + a2, content: s2, "": "outer" + a2 }, function(r2, o2) {
             S.fn[o2] = function(e2, t2) {
               var n2 = arguments.length && (r2 || "boolean" != typeof e2), i2 = r2 || (true === e2 || true === t2 ? "margin" : "border");
-              return $15(this, function(e3, t3, n3) {
+              return $11(this, function(e3, t3, n3) {
                 var r3;
                 return x(e3) ? 0 === o2.indexOf("outer") ? e3["inner" + a2] : e3.document.documentElement["client" + a2] : 9 === e3.nodeType ? (r3 = e3.documentElement, Math.max(e3.body["scroll" + a2], r3["scroll" + a2], e3.body["offset" + a2], r3["offset" + a2], r3["client" + a2])) : void 0 === n3 ? S.css(e3, t3, i2) : S.style(e3, t3, n3, i2);
               }, s2, n2 ? e2 : void 0, n2);
@@ -2662,7 +2662,7 @@
         function T(n2) {
           return Nr.test(n2);
         }
-        function $15(n2) {
+        function $11(n2) {
           return Pr.test(n2);
         }
         function D(n2) {
@@ -5322,7 +5322,7 @@
             return n2 = Ec(n2), n2 && jt.test(n2) ? n2.replace(mt, ye) : n2;
           }
           function Ra(n2, t2, r2) {
-            return n2 = Ec(n2), t2 = r2 ? X : t2, t2 === X ? $15(n2) ? Q(n2) : _(n2) : n2.match(t2) || [];
+            return n2 = Ec(n2), t2 = r2 ? X : t2, t2 === X ? $11(n2) ? Q(n2) : _(n2) : n2.match(t2) || [];
           }
           function za(t2) {
             var r2 = null == t2 ? 0 : t2.length, e2 = mi();
@@ -6203,12 +6203,12 @@
         function U() {
           return "complete" === document.readyState || "interactive" === document.readyState;
         }
-        var $15 = /* @__PURE__ */ new Set();
+        var $11 = /* @__PURE__ */ new Set();
         function z(e2) {
-          $15.add(e2);
+          $11.add(e2);
         }
         function H(e2) {
-          $15.delete(e2);
+          $11.delete(e2);
         }
         function G() {
           return "complete" === document.readyState;
@@ -6219,9 +6219,9 @@
         }
         if (!U()) {
           var J = function() {
-            U() && ($15.forEach(function(e2) {
+            U() && ($11.forEach(function(e2) {
               return e2();
-            }), $15.clear(), G() && (document.removeEventListener("readystatechange", J), Q.forEach(function(e2) {
+            }), $11.clear(), G() && (document.removeEventListener("readystatechange", J), Q.forEach(function(e2) {
               return e2();
             }), Q.clear()));
           };
@@ -7743,7 +7743,7 @@
           function U2() {
             e2.removeEventListener("__darkreader__updateSheet", I2), q2();
           }
-          function $16() {
+          function $12() {
             w2.disconnect(), g2 = true, v2 && v2.stop(), m2 && m2.stop(), U2();
           }
           var z2 = 0;
@@ -7773,8 +7773,8 @@
               });
             }
             n2 && (g2 = false, i3());
-          }, pause: $16, destroy: function() {
-            if ($16(), B(h2), B(p2), u2(), wr.has(V2)) {
+          }, pause: $12, destroy: function() {
+            if ($12(), B(h2), B(p2), u2(), wr.has(V2)) {
               var e3 = wr.get(V2);
               wr.delete(V2), e3 && e3();
             }
@@ -8382,130 +8382,85 @@
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/greet.js
   function greet() {
+    let year = (/* @__PURE__ */ new Date()).getFullYear();
     console.log(
       `---------------------
 		
-	Hello Jack \u{1F60E}
+	Hello Jack \u{1F60E}, ${year} !
 
 		---------------------`
     );
+    document.querySelector("#info-date").innerHTML = year;
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/eventBinding.js
-  var import_jquery9 = __toESM(require_jquery_min());
+  var import_jquery6 = __toESM(require_jquery_min());
   var import_lodash = __toESM(require_lodash_min());
 
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/fixAnchorTop.js
-  var import_jquery = __toESM(require_jquery_min());
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/isMobile.js
-  function browserRedirect() {
-    let sUserAgent = navigator.userAgent.toLowerCase(), bIsIpad = sUserAgent.match(/ipad/i) == "ipad", bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os", bIsMidp = sUserAgent.match(/midp/i) == "midp", bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4", bIsUc = sUserAgent.match(/ucweb/i) == "ucweb", bIsAndroid = sUserAgent.match(/android/i) == "android", bIsCE = sUserAgent.match(/windows ce/i) == "windows ce", bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-      return true;
-    }
-  }
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/fixAnchorTop.js
-  function fixAnchorTop() {
-    let _hash = decodeURIComponent(location.hash);
-    let _ele = browserRedirect() ? (0, import_jquery.default)("body") : (0, import_jquery.default)("html");
-    if (_hash)
-      _ele.scrollTop((0, import_jquery.default)(_hash).offset().top - 48);
-  }
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/colorHeader.js
-  var import_jquery2 = __toESM(require_jquery_min());
-  function colorHeader() {
-    let _curScroll = (0, import_jquery2.default)(this).scrollTop() + 48;
-    if (_curScroll > 120) {
-      (0, import_jquery2.default)("#header").addClass("js-header");
-    } else {
-      (0, import_jquery2.default)("#header").removeClass("js-header");
-    }
-  }
-
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/colorToc.js
-  var import_jquery4 = __toESM(require_jquery_min());
+  var import_jquery2 = __toESM(require_jquery_min());
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initToc.js
-  var import_jquery3 = __toESM(require_jquery_min());
+  var import_jquery = __toESM(require_jquery_min());
   function initToc() {
-    (0, import_jquery3.default)("h2, h3").addClass("headline");
-    (0, import_jquery3.default)("#TableOfContents a").each(function() {
-      let _id = "id-" + (0, import_jquery3.default)(this).attr("href").split("#")[1];
-      (0, import_jquery3.default)(this).attr("id", _id);
-      (0, import_jquery3.default)(this).addClass("toc-link");
+    (0, import_jquery.default)("h2, h3").addClass("headline");
+    (0, import_jquery.default)("#TableOfContents a").each(function() {
+      let _id = "id-" + (0, import_jquery.default)(this).attr("href").split("#")[1];
+      (0, import_jquery.default)(this).attr("id", _id);
+      (0, import_jquery.default)(this).addClass("toc-link");
     });
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/colorToc.js
   function colorToc() {
     initToc();
-    let _curScroll = (0, import_jquery4.default)(this).scrollTop() + 48;
+    let _curScroll = (0, import_jquery2.default)(this).scrollTop() + 48;
     let _curHeadline;
     let _arrTop = [];
-    (0, import_jquery4.default)(".headline").each(function() {
-      let _curHeadlineTop = (0, import_jquery4.default)(this).offset().top;
+    (0, import_jquery2.default)(".headline").each(function() {
+      let _curHeadlineTop = (0, import_jquery2.default)(this).offset().top;
       _arrTop.push(_curHeadlineTop);
       if (_curHeadlineTop - 1 < _curScroll)
-        _curHeadline = (0, import_jquery4.default)(this);
+        _curHeadline = (0, import_jquery2.default)(this);
       if (_curScroll >= _arrTop[0]) {
         let _id = "id-" + _curHeadline.attr("id");
-        (0, import_jquery4.default)(".toc-link").removeClass("toc-link--active");
-        (0, import_jquery4.default)("#" + _id).addClass("toc-link--active");
+        (0, import_jquery2.default)(".toc-link").removeClass("toc-link--active");
+        (0, import_jquery2.default)("#" + _id).addClass("toc-link--active");
       }
     });
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/toggleToc.js
-  var import_jquery5 = __toESM(require_jquery_min());
+  var import_jquery3 = __toESM(require_jquery_min());
   function toggleToc(e) {
     e.stopPropagation();
-    let toc = (0, import_jquery5.default)(".toc"), po = (0, import_jquery5.default)(".toc .page-operation");
+    let toc = (0, import_jquery3.default)(".toc"), po = (0, import_jquery3.default)(".toc .page-operation");
     let _right = toc.css("right");
     if (_right === "-300px") {
       toc.css({ right: "16px" });
       po.css({ right: "24px" });
-      (0, import_jquery5.default)("body").click(toggleToc);
+      (0, import_jquery3.default)("body").click(toggleToc);
     } else {
       toc.css({ right: "-300px" });
       po.css({ right: "-300px" });
-      (0, import_jquery5.default)("body").unbind("click");
+      (0, import_jquery3.default)("body").unbind("click");
     }
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/toggleColor.js
   var import_darkreader = __toESM(require_darkreader_min());
-  var import_jquery7 = __toESM(require_jquery_min());
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/parseSiteParams.js
-  var import_jquery6 = __toESM(require_jquery_min());
-  function parseSiteParams() {
-    let _vars = (0, import_jquery6.default)("#vars");
-    console.log(_vars.text());
-    return JSON.parse(_vars.text());
-  }
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/toggleColor.js
-  var dark = parseSiteParams().dark;
-  var sun = `<svg t="1657283336399" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2283" width="16" height="16"><path d="M512 288c-123.488 0-224 100.512-224 224 0 123.488 100.512 224 224 224s224-100.512 224-224C736 388.512 635.488 288 512 288zM512 672c-88.384 0-160-71.616-160-160s71.616-160 160-160 160 71.616 160 160S600.384 672 512 672zM512 224c17.664 0 32-14.336 32-32L544 128c0-17.664-14.336-32-32-32s-32 14.336-32 32l0 64C480 209.664 494.336 224 512 224zM512 800c-17.664 0-32 14.336-32 32l0 64c0 17.664 14.336 32 32 32s32-14.336 32-32l0-64C544 814.336 529.664 800 512 800zM760.864 308.32l45.248-45.248c12.512-12.512 12.512-32.736 0-45.248-12.512-12.512-32.736-12.512-45.248 0l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248C728.128 320.832 748.384 320.832 760.864 308.32zM263.136 715.68l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248s32.736 12.512 45.248 0l45.248-45.248c12.512-12.544 12.512-32.768 0-45.248C295.872 703.168 275.616 703.136 263.136 715.68zM224 512c0-17.664-14.336-32-32-32L128 480c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0C209.664 544 224 529.664 224 512zM896 480l-64 0c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0c17.664 0 32-14.336 32-32S913.664 480 896 480zM263.072 308.32c12.512 12.512 32.768 12.512 45.248 0 12.512-12.512 12.512-32.736 0-45.248l-45.248-45.248c-12.512-12.512-32.736-12.512-45.248 0-12.512 12.512-12.512 32.736 0 45.248L263.072 308.32zM760.928 715.616c-12.544-12.512-32.768-12.512-45.248 0-12.512 12.512-12.544 32.736 0 45.248l45.248 45.248c12.512 12.512 32.736 12.512 45.248 0s12.512-32.736 0-45.248L760.928 715.616z" p-id="2284" fill="#6c757d"></path></svg>`;
-  var moon = `<svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg>`;
-  if (dark && !getDarkOfLocalStorage()) {
-    (0, import_darkreader.enable)({
-      brightness: 100,
-      contrast: 90,
-      sepia: 10
-    });
-    setDarkOfLocalStorage("on");
-  }
+  var import_jquery4 = __toESM(require_jquery_min());
+  var sun = `<svg t="1657283336399" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2283" width="16" height="16"><path d="M512 288c-123.488 0-224 100.512-224 224 0 123.488 100.512 224 224 224s224-100.512 224-224C736 388.512 635.488 288 512 288zM512 672c-88.384 0-160-71.616-160-160s71.616-160 160-160 160 71.616 160 160S600.384 672 512 672zM512 224c17.664 0 32-14.336 32-32L544 128c0-17.664-14.336-32-32-32s-32 14.336-32 32l0 64C480 209.664 494.336 224 512 224zM512 800c-17.664 0-32 14.336-32 32l0 64c0 17.664 14.336 32 32 32s32-14.336 32-32l0-64C544 814.336 529.664 800 512 800zM760.864 308.32l45.248-45.248c12.512-12.512 12.512-32.736 0-45.248-12.512-12.512-32.736-12.512-45.248 0l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248C728.128 320.832 748.384 320.832 760.864 308.32zM263.136 715.68l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248s32.736 12.512 45.248 0l45.248-45.248c12.512-12.544 12.512-32.768 0-45.248C295.872 703.168 275.616 703.136 263.136 715.68zM224 512c0-17.664-14.336-32-32-32L128 480c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0C209.664 544 224 529.664 224 512zM896 480l-64 0c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0c17.664 0 32-14.336 32-32S913.664 480 896 480zM263.072 308.32c12.512 12.512 32.768 12.512 45.248 0 12.512-12.512 12.512-32.736 0-45.248l-45.248-45.248c-12.512-12.512-32.736-12.512-45.248 0-12.512 12.512-12.512 32.736 0 45.248L263.072 308.32zM760.928 715.616c-12.544-12.512-32.768-12.512-45.248 0-12.512 12.512-12.544 32.736 0 45.248l45.248 45.248c12.512 12.512 32.736 12.512 45.248 0s12.512-32.736 0-45.248L760.928 715.616z" p-id="2284" fill="#8a8a8a"></path></svg>`;
+  var moon = `<svg t="1695286075420" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3452" width="16" height="16"><path d="M427.989333 181.12A395.84 395.84 0 0 0 426.666667 213.333333c0 211.754667 172.245333 384 384 384 10.816 0 21.557333-0.437333 32.213333-1.322666C805.344 743.733333 671.232 853.333333 512 853.333333c-188.213333 0-341.333333-153.12-341.333333-341.333333 0-159.232 109.6-293.344 257.322666-330.88M512 85.333333C276.362667 85.333333 85.333333 276.362667 85.333333 512c0 235.648 191.029333 426.666667 426.666667 426.666667 235.648 0 426.666667-191.018667 426.666667-426.666667 0-9.525333-0.426667-18.933333-1.045334-28.309333A297.418667 297.418667 0 0 1 810.666667 512c-164.949333 0-298.666667-133.717333-298.666667-298.666667 0-45.408 10.186667-88.426667 28.309333-126.954666A424.672 424.672 0 0 0 512 85.333333z" p-id="3453" fill="#8a8a8a"></path></svg>`;
+  moon = `<svg t="1695287541521" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6596" width="16" height="16"><path d="M512 938.666667a426.666667 426.666667 0 0 1 0-853.333334 42.666667 42.666667 0 0 1 42.666667 42.666667 341.333333 341.333333 0 0 0 341.333333 341.333333 42.666667 42.666667 0 0 1 42.666667 42.666667 426.666667 426.666667 0 0 1-426.666667 426.666667z m-40.106667-765.44a341.333333 341.333333 0 1 0 378.88 378.88 426.666667 426.666667 0 0 1-378.88-378.88z" fill="#8a8a8a" p-id="6597"></path></svg>`;
+  var initColor = {
+    brightness: 100,
+    contrast: 90,
+    sepia: 10
+  };
   if (getDarkOfLocalStorage() === "on") {
-    (0, import_darkreader.enable)({
-      brightness: 100,
-      contrast: 90,
-      sepia: 10
-    });
-    (0, import_jquery7.default)("#light-dark a").html(sun);
+    (0, import_darkreader.enable)(initColor);
+    (0, import_jquery4.default)("#light-dark a").html(sun);
   } else if (getDarkOfLocalStorage() === "off") {
     (0, import_darkreader.disable)();
   }
@@ -8514,15 +8469,11 @@
     if (_isEnabled) {
       (0, import_darkreader.disable)();
       setDarkOfLocalStorage("off");
-      (0, import_jquery7.default)("#light-dark a").html(moon);
+      (0, import_jquery4.default)("#light-dark a").html(moon);
     } else {
-      (0, import_darkreader.enable)({
-        brightness: 100,
-        contrast: 90,
-        sepia: 10
-      });
+      (0, import_darkreader.enable)(initColor);
       setDarkOfLocalStorage("on");
-      (0, import_jquery7.default)("#light-dark a").html(sun);
+      (0, import_jquery4.default)("#light-dark a").html(sun);
     }
   }
   function getDarkOfLocalStorage() {
@@ -8533,14 +8484,15 @@
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/viewImage.js
-  var import_jquery8 = __toESM(require_jquery_min());
+  var import_jquery5 = __toESM(require_jquery_min());
   function viewImage(e) {
     if (location.pathname === "/")
       return;
     let curImgSrc = e.target.attributes.src.value;
+    curImgSrc = encodeURI(curImgSrc);
     console.log(curImgSrc);
     document.body.style = "overflow: hidden;";
-    (0, import_jquery8.default)("body").prepend(
+    (0, import_jquery5.default)("body").prepend(
       `
 		<div 
 			id="mask" 
@@ -8603,8 +8555,8 @@
 
 				var _wiWidth = document.getElementById('img').offsetWidth;
 				var _screenWidth = document.getElementById('mask').offsetWidth;
-				// console.log(_wiWidth)
-				// console.log(_screenWidth)
+				console.log(_wiWidth)
+				console.log(_screenWidth)
 				var _width = 0;
 				if (_wiWidth > 2052) {
 					_width = _wiWidth / 3;
@@ -8613,9 +8565,10 @@
 				} else {
 					_width = _wiWidth;
 				}
-
 				_width = _screenWidth > 1026 ? _width : _screenWidth * 0.9;
-				// console.log(_width);
+				// \u8BFB\u53D6 http \u56FE\u7247\u7684\u65F6\u5019\uFF0C\u5176\u9ED8\u8BA4\u5C3A\u5BF8\u4E3A 18 \uFF0C\u597D\u5947\u602A
+				console.log(_width);
+				if (_width < 30) { _width = 618 }
 				document.getElementById('img').width = _width;
 			<\/script>
 		</div>
@@ -8625,96 +8578,101 @@
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/eventBinding.js
   function initEventBinding() {
-    (0, import_jquery9.default)(window).bind("hashchange", fixAnchorTop);
-    (0, import_jquery9.default)(window).bind("scroll", (0, import_lodash.throttle)(colorHeader, 20));
-    (0, import_jquery9.default)(window).bind("scroll", (0, import_lodash.throttle)(colorToc, 500));
-    (0, import_jquery9.default)("#toc").bind("click", toggleToc);
-    (0, import_jquery9.default)("#light-dark").bind("click", toggleColor);
-    if (location.href.indexOf("ovirgo") > -1)
-      (0, import_jquery9.default)("#s").hide();
-    (0, import_jquery9.default)(".content img").bind("click", viewImage);
+    (0, import_jquery6.default)(window).bind("scroll", (0, import_lodash.throttle)(colorToc, 500));
+    (0, import_jquery6.default)("#toc").bind("click", toggleToc);
+    (0, import_jquery6.default)("#light-dark").bind("click", toggleColor);
+    if (location.href.indexOf("walkssi") > -1)
+      (0, import_jquery6.default)("#s").hide();
+    (0, import_jquery6.default)(".content img").bind("click", viewImage);
+  }
+
+  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initImage.js
+  var import_jquery7 = __toESM(require_jquery_min());
+  function initImage() {
+    (0, import_jquery7.default)("img").each((idx, item) => {
+      let src = (0, import_jquery7.default)(item).attr("src");
+      if (!src.startsWith("http") && !src.startsWith("/")) {
+        (0, import_jquery7.default)(item).attr("src", "/" + src);
+      }
+      let _alt = (0, import_jquery7.default)(item).attr("alt") || "";
+      if (_alt.indexOf("|") > -1) {
+        (0, import_jquery7.default)(item).attr("width", _alt.split("|")[1]);
+      }
+    });
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initCodeBlock.js
-  var import_jquery10 = __toESM(require_jquery_min());
+  var import_jquery8 = __toESM(require_jquery_min());
+
+  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/utils/isMobile.js
+  function browserRedirect() {
+    let sUserAgent = navigator.userAgent.toLowerCase(), bIsIpad = sUserAgent.match(/ipad/i) == "ipad", bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os", bIsMidp = sUserAgent.match(/midp/i) == "midp", bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4", bIsUc = sUserAgent.match(/ucweb/i) == "ucweb", bIsAndroid = sUserAgent.match(/android/i) == "android", bIsCE = sUserAgent.match(/windows ce/i) == "windows ce", bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+      return true;
+    }
+  }
+
+  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initCodeBlock.js
   function initCodeBlock() {
-    const _arr = (0, import_jquery10.default)("pre code");
+    const _arr = (0, import_jquery8.default)("pre code");
     _arr.each(function(idx) {
-      let isShow = !parseSiteParams().hasFoldAllCodeBlocks;
-      if (browserRedirect())
-        isShow = false;
-      let _this = (0, import_jquery10.default)(this);
-      let _lang = (0, import_jquery10.default)(this).attr("data-lang");
-      let _id = _lang + idx;
+      let _lang = (0, import_jquery8.default)(this).attr("data-lang");
       if (!_lang)
         return;
-      if (_lang[0] === "_" && _lang[1] !== "_") {
-        _lang = _lang.slice(1);
-        isShow = false;
-      }
-      if (_lang[0] === "_" && _lang[1] === "_") {
-        _lang = _lang.slice(2);
-        isShow = false;
-        _this.addClass("oh-xyx");
-        _this.css("white-space", "pre-wrap");
-      }
-      if (!isShow)
-        _this.css("display", "none");
-      (0, import_jquery10.default)(this).before(`<div class="lang" id="${_id}">${isShow ? _lang + " \u25BD" : _lang + " \u25B7"}</div>`);
-      let _langEle = (0, import_jquery10.default)("#" + _id);
-      _langEle.click(function() {
-        _this.toggle();
-        isShow = !isShow;
-        _langEle.html(isShow ? `${_lang} \u25BD` : `${_lang} \u25B7`);
-      });
+      (0, import_jquery8.default)(this).before(`<div class="lang">${!browserRedirect() ? _lang : ""}</div>`);
     });
   }
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initNavLink.js
-  var import_jquery11 = __toESM(require_jquery_min());
-  var blankLiItem = `<li><a></a></li>`;
-  var col = !browserRedirect() ? 5 : 2;
-  function initNavLink() {
-    if (location.href.indexOf("nav") < 0)
-      return;
-    (0, import_jquery11.default)(".content-nav .nav ul").each((idx, item) => {
-      let _itemLen = item.children.length;
-      let _prevEle2 = (0, import_jquery11.default)(item).prev();
-      _prevEle2.html(_prevEle2.html() + ` <sup>\u300C${_itemLen}\u300D</sup>`);
-      let _len = col - (_itemLen % col ? _itemLen % col : col);
-      for (let j = 0; j < _len; j++) {
-        item.innerHTML = item.innerHTML + blankLiItem;
-      }
-    });
-    let _bmLen = (0, import_jquery11.default)(".content-nav .bookmark ul")[0].children.length;
-    let _st = '<div style="float: right; font-size: 13px;">\u300C' + (_bmLen > 100 ? "Alert... \u{1F608}\u{1F608}\u{1F608}" : "Good... \u{1F973}\u{1F973}\u{1F973}") + "\u300D</div>";
-    let _prevEle = (0, import_jquery11.default)(".content-nav .bookmark").prev();
-    _prevEle.html(_prevEle.html() + ` <sup>\u300C${_bmLen}\u300D</sup> ${_st}`);
-  }
-
-  // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/initMouseClickAnimate.js
-  var import_jquery12 = __toESM(require_jquery_min());
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/enhanceOrgMode.js
-  var import_jquery13 = __toESM(require_jquery_min());
+  var import_jquery9 = __toESM(require_jquery_min());
   function enhanceOrgMode_default() {
-    (0, import_jquery13.default)(".html-block p").each((idx, item) => {
+    (0, import_jquery9.default)(".html-block p").each((idx, item) => {
       item.innerHTML = `${item.innerText}`;
     });
   }
 
   // ns-hugo:/home/runner/work/ShanyouBlog/ShanyouBlog/themes/virgo/assets/js/init/enhanceMarkdown.js
-  var import_jquery14 = __toESM(require_jquery_min());
+  var import_jquery10 = __toESM(require_jquery_min());
   function enhanceMarkdown_default() {
-    (0, import_jquery14.default)("em").each((idx, item) => {
+    (0, import_jquery10.default)("em").each((idx, item) => {
       let _innerText = item.innerHTML;
       if (_innerText.indexOf("_") === 0) {
         item.outerHTML = `<u>${_innerText.slice(1)}</u>`;
-      } else if (_innerText.indexOf("-") === 0) {
-        item.outerHTML = `<span class="oh-hl">${_innerText.slice(1)}</span>`;
-        console.log((0, import_jquery14.default)(".oh-hl")[idx]);
       } else if (_innerText.indexOf("=") === 0) {
-        item.outerHTML = `<div class="oh-essay">${_innerText.slice(1)}</div>`;
+        item.outerHTML = `<span class="oh-hl">${_innerText.slice(1)}</span>`;
+      }
+    });
+    (0, import_jquery10.default)("blockquote p").each((idx, item) => {
+      let _innerHtml = item.innerHTML;
+      if (_innerHtml.indexOf("::") === 0) {
+        item.parentNode.setAttribute("class", "oh-essay");
+        item.outerHTML = `<div>${_innerHtml.slice(2)}</div>`;
+      }
+    });
+    (0, import_jquery10.default)(".content, .list").each((idx, item) => {
+      let _innerHtml = item.innerHTML;
+      if (_innerHtml.indexOf("[[") > -1) {
+        console.log(">>>", _innerHtml);
+        let _re = /!\[\[(([\/\-\.\*\$\&\:]|\w|\s|[^\x00-\xff])*\.\w+)\s*\|?\s*(\d*)\]\]/g;
+        let _str = _innerHtml.replace(_re, '<img src="$1" alt="$1" width="$3" />');
+        let _reLink = /\[\[(([\/\-\.\*\$\:\#]|\w|\s|[^\x00-\xff])*)\|?(([\/\-\.\*\$]|\w|\s|[^\x00-\xff])*)\]\]/g;
+        let _strLink = _str.replace(_reLink, (val) => {
+          val = val.replace(/[\[\]]/g, "");
+          let _arr = val.split(/\s*\|\s*/);
+          let _relLink = _arr[0];
+          let _desc = _arr[1] ? _arr[1] : _arr[0];
+          let _idx = _desc.indexOf("#");
+          if (_idx > -1) {
+            if (_idx == 0) {
+              _relLink = location.pathname.slice(1) + _desc;
+            } else {
+              _relLink = _desc.replace("#", "/#");
+              _relLink = _relLink.replace(/[\.\、]/g, "");
+            }
+          }
+          return `<a href="/${_relLink.replace(/\s/g, "-").toLowerCase()}">${_desc}</a>`;
+        });
+        item.innerHTML = _strLink;
       }
     });
   }
@@ -8722,10 +8680,10 @@
   // <stdin>
   greet();
   enhanceOrgMode_default();
-  initNavLink();
-  initEventBinding();
   initCodeBlock();
   enhanceMarkdown_default();
+  initImage();
+  initEventBinding();
 })();
 /*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 /**
